@@ -11,10 +11,12 @@ struct HomeView: View {
     @EnvironmentObject var navigation : NavigationManager
     var body: some View {
         VStack{
-            VStack{
-                Text("Seus resultados:")
-                    .fontWeight(.semibold)
-            }
+            ProgressBar(
+                title: "Seus resultados:",
+                value: 32,
+                total: 44,
+                label: "créditos totais"
+            )
         }
         .navigationTitle("Olá, Douglas!")
     }

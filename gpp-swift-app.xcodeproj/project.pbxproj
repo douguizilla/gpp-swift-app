@@ -16,6 +16,7 @@
 		61C1BCD12B9A566E00ABAA14 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCD02B9A566E00ABAA14 /* LoginView.swift */; };
 		61C1BCD42B9A574500ABAA14 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCD32B9A574500ABAA14 /* NavigationManager.swift */; };
 		61C1BCD62B9A586400ABAA14 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCD52B9A586400ABAA14 /* HomeView.swift */; };
+		61C1BCDA2B9A640700ABAA14 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCD92B9A640700ABAA14 /* ProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		61C1BCD02B9A566E00ABAA14 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		61C1BCD32B9A574500ABAA14 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		61C1BCD52B9A586400ABAA14 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		61C1BCD92B9A640700ABAA14 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		61C1BCCC2B9A544600ABAA14 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				61C1BCD72B9A63EB00ABAA14 /* Components */,
 				61C1BCCF2B9A55FD00ABAA14 /* View */,
 			);
 			path = Core;
@@ -179,6 +182,22 @@
 				61C1BCD32B9A574500ABAA14 /* NavigationManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		61C1BCD72B9A63EB00ABAA14 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCD82B9A63F200ABAA14 /* ProgressBar */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		61C1BCD82B9A63F200ABAA14 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCD92B9A640700ABAA14 /* ProgressBar.swift */,
+			);
+			path = ProgressBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +333,7 @@
 				61C1BCD12B9A566E00ABAA14 /* LoginView.swift in Sources */,
 				61C1BCD62B9A586400ABAA14 /* HomeView.swift in Sources */,
 				61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */,
+				61C1BCDA2B9A640700ABAA14 /* ProgressBar.swift in Sources */,
 				61C1BCD42B9A574500ABAA14 /* NavigationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
