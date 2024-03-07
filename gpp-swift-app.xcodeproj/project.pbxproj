@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61C1BCA22B9A4F4500ABAA14 /* gpp_swift_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCA12B9A4F4500ABAA14 /* gpp_swift_appApp.swift */; };
+		61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCA12B9A4F4500ABAA14 /* GppApp.swift */; };
 		61C1BCA42B9A4F4500ABAA14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCA32B9A4F4500ABAA14 /* ContentView.swift */; };
 		61C1BCA62B9A4F4700ABAA14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C1BCA52B9A4F4700ABAA14 /* Assets.xcassets */; };
 		61C1BCA92B9A4F4700ABAA14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C1BCA82B9A4F4700ABAA14 /* Preview Assets.xcassets */; };
@@ -35,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		61C1BC9E2B9A4F4500ABAA14 /* gpp-swift-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gpp-swift-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		61C1BCA12B9A4F4500ABAA14 /* gpp_swift_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpp_swift_appApp.swift; sourceTree = "<group>"; };
+		61C1BCA12B9A4F4500ABAA14 /* GppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GppApp.swift; sourceTree = "<group>"; };
 		61C1BCA32B9A4F4500ABAA14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		61C1BCA52B9A4F4700ABAA14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61C1BCA82B9A4F4700ABAA14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		61C1BCA02B9A4F4500ABAA14 /* gpp-swift-app */ = {
 			isa = PBXGroup;
 			children = (
-				61C1BCA12B9A4F4500ABAA14 /* gpp_swift_appApp.swift */,
+				61C1BCA12B9A4F4500ABAA14 /* GppApp.swift */,
 				61C1BCA32B9A4F4500ABAA14 /* ContentView.swift */,
 				61C1BCA52B9A4F4700ABAA14 /* Assets.xcassets */,
 				61C1BCA72B9A4F4700ABAA14 /* Preview Content */,
@@ -258,7 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C1BCA42B9A4F4500ABAA14 /* ContentView.swift in Sources */,
-				61C1BCA22B9A4F4500ABAA14 /* gpp_swift_appApp.swift in Sources */,
+				61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
