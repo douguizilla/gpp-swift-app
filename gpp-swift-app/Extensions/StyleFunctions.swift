@@ -9,7 +9,7 @@ import SwiftUI
 
 extension View {
     
-    func grayBackground(_ padding: CGFloat = 8) -> some View {
+    func grayBackground(_ padding: CGFloat = 0) -> some View {
         self
             .padding(padding)
             .padding(.horizontal, padding)
