@@ -14,30 +14,35 @@ struct ProgressBar : View {
     var label : String = ""
     
     var body: some View {
-        GeometryReader{ proxy in
-            VStack{
-                let width = proxy.size.width
-                
-                Text(title)
-                    .fontWeight(.semibold)
-                    .frame(width: width, alignment: .leading)
-                
-                ZStack(alignment: .leading){
-                    RoundedRectangle(cornerRadius: 5)
-                        .foregroundColor(Color(uiColor: .systemGray4))
-                        .frame(height: 30)
+        VStack{
+            GeometryReader{ proxy in
+                VStack{
+                    let width = proxy.size.width
                     
-                    RoundedRectangle(cornerRadius: 5)
-                        .foregroundColor(.blue)
-                        .frame(width: (((width * value) / total) * width) / width, height: 30, alignment: .trailing)
+                    Text(title)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .frame(width: width, alignment: .leading)
                     
+                    ZStack(alignment: .leading){
+                        RoundedRectangle(cornerRadius: 5)
+                            .foregroundColor(Color(uiColor: .systemGray3))
+                            .frame(height: 25)
+                        
+                        RoundedRectangle(cornerRadius: 5)
+                            .foregroundColor(.blue)
+                            .frame(width: (((width * value) / total) * width) / width, height: 25, alignment: .trailing)
+                        
+                    }
+                    
+                    Text("\(Int(value))/\(Int(total)) \(label)")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .frame(width: width, alignment: .trailing)
                 }
-                
-                Text("\(Int(value))/\(Int(total)) \(label)")
-                    .fontWeight(.semibold)
-                    .frame(width: width, alignment: .trailing)
             }
         }
+        .frame(height: 95)
     }
 }
 
