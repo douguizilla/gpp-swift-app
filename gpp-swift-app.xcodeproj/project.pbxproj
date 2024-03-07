@@ -13,6 +13,9 @@
 		61C1BCB32B9A4F4800ABAA14 /* gpp_swift_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCB22B9A4F4800ABAA14 /* gpp_swift_appTests.swift */; };
 		61C1BCBD2B9A4F4800ABAA14 /* gpp_swift_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCBC2B9A4F4800ABAA14 /* gpp_swift_appUITests.swift */; };
 		61C1BCBF2B9A4F4800ABAA14 /* gpp_swift_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCBE2B9A4F4800ABAA14 /* gpp_swift_appUITestsLaunchTests.swift */; };
+		61C1BCD12B9A566E00ABAA14 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCD02B9A566E00ABAA14 /* LoginView.swift */; };
+		61C1BCD42B9A574500ABAA14 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCD32B9A574500ABAA14 /* NavigationManager.swift */; };
+		61C1BCD62B9A586400ABAA14 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCD52B9A586400ABAA14 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		61C1BCB82B9A4F4800ABAA14 /* gpp-swift-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gpp-swift-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C1BCBC2B9A4F4800ABAA14 /* gpp_swift_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpp_swift_appUITests.swift; sourceTree = "<group>"; };
 		61C1BCBE2B9A4F4800ABAA14 /* gpp_swift_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpp_swift_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		61C1BCD02B9A566E00ABAA14 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		61C1BCD32B9A574500ABAA14 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		61C1BCD52B9A586400ABAA14 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 			children = (
 				61C1BCCB2B9A543D00ABAA14 /* App */,
 				61C1BCCC2B9A544600ABAA14 /* Core */,
+				61C1BCD22B9A573000ABAA14 /* Managers */,
 				61C1BCCD2B9A547800ABAA14 /* Extensions */,
 				61C1BCCE2B9A54C600ABAA14 /* Models */,
 				61C1BCA52B9A4F4700ABAA14 /* Assets.xcassets */,
@@ -138,6 +145,7 @@
 		61C1BCCC2B9A544600ABAA14 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				61C1BCCF2B9A55FD00ABAA14 /* View */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -154,6 +162,23 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		61C1BCCF2B9A55FD00ABAA14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCD02B9A566E00ABAA14 /* LoginView.swift */,
+				61C1BCD52B9A586400ABAA14 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61C1BCD22B9A573000ABAA14 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCD32B9A574500ABAA14 /* NavigationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +311,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C1BCD12B9A566E00ABAA14 /* LoginView.swift in Sources */,
+				61C1BCD62B9A586400ABAA14 /* HomeView.swift in Sources */,
 				61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */,
+				61C1BCD42B9A574500ABAA14 /* NavigationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,11 +480,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"gpp-swift-app/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "GPP-UFU";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,11 +511,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"gpp-swift-app/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "GPP-UFU";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
