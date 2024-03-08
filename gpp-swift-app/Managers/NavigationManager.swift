@@ -24,6 +24,7 @@ enum LoginScreen : Screen {
 
 enum HomeScreen : Screen {
     case subjects
+    case publications
 }
 
 protocol Screen : Hashable {}

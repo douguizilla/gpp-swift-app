@@ -43,7 +43,9 @@ struct HomeView: View {
                         GButton(
                             systemName: "doc",
                             label: "Publicações"
-                        )
+                        ){
+                            navigation.navigate(to: HomeScreen.publications)
+                        }
                         .grayBackground()
                         
                         Spacer()
@@ -134,6 +136,8 @@ struct HomeView: View {
             switch screen {
             case .subjects:
                 SubjectsView()
+            case .publications:
+                PublicationsView()
             }
         }
     }

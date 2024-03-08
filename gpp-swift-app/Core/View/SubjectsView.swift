@@ -44,7 +44,6 @@ struct SubjectsView: View {
         }
         .navigationTitle("Disciplinas")
         .navigationBarTitleDisplayMode(.large)
-        .background(.thinMaterial)
         .toolbar{
             ToolbarItem(placement: .topBarTrailing) {
                 Button{
