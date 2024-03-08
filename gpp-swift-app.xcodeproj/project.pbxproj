@@ -22,7 +22,6 @@
 		61C1BCE32B9B661700ABAA14 /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCE22B9B661700ABAA14 /* SubjectsView.swift */; };
 		61C1BCE52B9B7BF600ABAA14 /* PublicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCE42B9B7BF600ABAA14 /* PublicationsView.swift */; };
 		61C1BCE72B9B7ED900ABAA14 /* DissertationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCE62B9B7ED900ABAA14 /* DissertationView.swift */; };
-		61C1BCEA2B9B915600ABAA14 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCE92B9B915600ABAA14 /* Triangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +60,6 @@
 		61C1BCE22B9B661700ABAA14 /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
 		61C1BCE42B9B7BF600ABAA14 /* PublicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationsView.swift; sourceTree = "<group>"; };
 		61C1BCE62B9B7ED900ABAA14 /* DissertationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertationView.swift; sourceTree = "<group>"; };
-		61C1BCE92B9B915600ABAA14 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,7 +202,6 @@
 		61C1BCD72B9A63EB00ABAA14 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				61C1BCE82B9B914800ABAA14 /* Shapes */,
 				61C1BCD82B9A63F200ABAA14 /* ProgressBar */,
 			);
 			path = Components;
@@ -216,14 +213,6 @@
 				61C1BCD92B9A640700ABAA14 /* ProgressBar.swift */,
 			);
 			path = ProgressBar;
-			sourceTree = "<group>";
-		};
-		61C1BCE82B9B914800ABAA14 /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-				61C1BCE92B9B915600ABAA14 /* Triangle.swift */,
-			);
-			path = Shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,7 +352,6 @@
 				61C1BCE52B9B7BF600ABAA14 /* PublicationsView.swift in Sources */,
 				61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */,
 				61C1BCDC2B9A697000ABAA14 /* StyleFunctions.swift in Sources */,
-				61C1BCEA2B9B915600ABAA14 /* Triangle.swift in Sources */,
 				61C1BCDA2B9A640700ABAA14 /* ProgressBar.swift in Sources */,
 				61C1BCD42B9A574500ABAA14 /* NavigationManager.swift in Sources */,
 				61C1BCE72B9B7ED900ABAA14 /* DissertationView.swift in Sources */,

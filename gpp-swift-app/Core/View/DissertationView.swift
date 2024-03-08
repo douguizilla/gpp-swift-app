@@ -99,6 +99,7 @@ struct DissertationView: View {
             }
         }
         .navigationTitle("Dissertação")
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

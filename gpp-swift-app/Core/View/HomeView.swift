@@ -53,7 +53,9 @@ struct HomeView: View {
                         GButton(
                             systemName: "pencil.and.list.clipboard",
                             label: "Dissertação"
-                        )
+                        ){
+                            navigation.navigate(to: HomeScreen.dissertation)
+                        }
                         .grayBackground()
                         
                     }
@@ -128,6 +130,7 @@ struct HomeView: View {
                     
                 }label: {
                     Image(systemName: "ellipsis.message")
+                        .bold()
                 }
                 .foregroundColor(.blue)
             }
@@ -139,7 +142,7 @@ struct HomeView: View {
             case .publications:
                 PublicationsView()
             case .dissertation:
-                PublicationsView()
+                DissertationView()
             }
         }
     }
