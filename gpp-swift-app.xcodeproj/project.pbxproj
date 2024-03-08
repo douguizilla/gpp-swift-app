@@ -18,6 +18,7 @@
 		61C1BCD62B9A586400ABAA14 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCD52B9A586400ABAA14 /* HomeView.swift */; };
 		61C1BCDA2B9A640700ABAA14 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCD92B9A640700ABAA14 /* ProgressBar.swift */; };
 		61C1BCDC2B9A697000ABAA14 /* StyleFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCDB2B9A697000ABAA14 /* StyleFunctions.swift */; };
+		61C1BCE12B9B638C00ABAA14 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCE02B9B638C00ABAA14 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		61C1BCD52B9A586400ABAA14 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		61C1BCD92B9A640700ABAA14 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		61C1BCDB2B9A697000ABAA14 /* StyleFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleFunctions.swift; sourceTree = "<group>"; };
+		61C1BCE02B9B638C00ABAA14 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				61C1BCDB2B9A697000ABAA14 /* StyleFunctions.swift */,
+				61C1BCE02B9B638C00ABAA14 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C1BCD12B9A566E00ABAA14 /* LoginView.swift in Sources */,
+				61C1BCE12B9B638C00ABAA14 /* StringExtension.swift in Sources */,
 				61C1BCD62B9A586400ABAA14 /* HomeView.swift in Sources */,
 				61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */,
 				61C1BCDC2B9A697000ABAA14 /* StyleFunctions.swift in Sources */,
