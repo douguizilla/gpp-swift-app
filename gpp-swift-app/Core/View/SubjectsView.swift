@@ -9,10 +9,81 @@ import SwiftUI
 
 struct SubjectsView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack{
+            List{
+                ProgressBar(
+                    title: "Seus resultados:",
+                    value: 25,
+                    total: 26,
+                    label: "créditos totais"
+                )
+                
+                Section("INTEGRA EM DISCIPLINAS"){
+                    Text("25 créditos")
+                }
+                
+                Section("INTEGRA EM SEMINÁRIO"){
+                    Text("1 crédito")
+                }
+                
+                Section("1 SEMESTRE"){
+                    ForEach(0..<3){_ in
+                        SubjectCell()
+                    }
+                }
+                
+                
+            }
+        }
+        .navigationTitle("Disciplinas")
+        .navigationBarTitleDisplayMode(.large)
+        .background(.thinMaterial)
+        .toolbar{
+            ToolbarItem(placement: .topBarTrailing) {
+                Button{
+                }label: {
+                    Image(systemName: "plus")
+                        .bold()
+                }
+            }
+        }
+    }
+    
+    func SubjectCell() -> some View {
+        HStack{
+            VStack{
+                Text("PGC")
+                Text("001")
+            }
+            .bold()
+            .foregroundColor(.white)
+            .font(.headline)
+            .padding()
+            .background(
+                Circle()
+                    .foregroundColor(.blue)
+            )
+            
+            VStack(alignment: .leading){
+                Text("Analise de Algoritmos")
+                    .font(.headline)
+                Text("FAZENDO")
+                    .foregroundStyle(.white)
+                    .font(.headline)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 4)
+                    .background(
+                        Capsule()
+                            .foregroundColor(.blue)
+                    )
+                
+            }
+        }
     }
 }
 
 #Preview {
-    SubjectsView()
+    NavigationStack{
+        SubjectsView()
+    }
 }

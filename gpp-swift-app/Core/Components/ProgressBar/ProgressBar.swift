@@ -31,7 +31,7 @@ struct ProgressBar : View {
                         
                         RoundedRectangle(cornerRadius: 5)
                             .foregroundColor(.blue)
-                            .frame(width: (((width * value) / total) * width) / width, height: 25, alignment: .trailing)
+                            .frame(width: (((width * min(value, total)) / total) * width) / width, height: 25, alignment: .trailing)
                         
                     }
                     

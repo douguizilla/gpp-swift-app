@@ -11,14 +11,19 @@ import SwiftUI
 class NavigationManager : ObservableObject {
     @Published var path = NavigationPath()
     
-    func navigate(to screen: Screen) {
+    func navigate(to screen: any Screen) {
         path.append(screen)
     }
 }
 
-enum Screen : Hashable {
+enum LoginScreen : Screen {
     case home
     case signUp
     case forgotPassword
+}
+
+enum HomeScreen : Screen {
     case subjects
 }
+
+protocol Screen : Hashable {}

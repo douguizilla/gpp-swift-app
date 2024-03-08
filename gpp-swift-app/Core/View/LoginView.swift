@@ -16,12 +16,12 @@ struct LoginView: View {
         ){
             VStack{
                 Button{
-                    navigation.navigate(to: .home)
+                    navigation.navigate(to: LoginScreen.home)
                 }label: {
                     Text("Entrar")
                 }
             }
-            .navigationDestination(for: Screen.self) { screen in
+            .navigationDestination(for: LoginScreen.self) { screen in
                 switch screen {
                 case .home:
                     HomeView()
@@ -30,8 +30,6 @@ struct LoginView: View {
                     Text("Cadastro")
                 case .forgotPassword:
                     Text("Esqueci a senha")
-                default:
-                    Text("")
                 }
             }
         }

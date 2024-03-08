@@ -34,7 +34,7 @@ struct HomeView: View {
                             systemName: "studentdesk",
                             label: "Disciplinas"
                         ){
-                            navigation.navigate(to: .subjects)
+                            navigation.navigate(to: HomeScreen.subjects)
                         }
                         .grayBackground()
                         
@@ -129,12 +129,10 @@ struct HomeView: View {
                 .foregroundColor(.blue)
             }
         }
-        .navigationDestination(for: Screen.self) { screen in
+        .navigationDestination(for: HomeScreen.self) { screen in
             switch screen {
             case .subjects:
                 SubjectsView()
-            default:
-                Text("")
             }
         }
     }
@@ -166,4 +164,5 @@ struct HomeView: View {
     NavigationStack{
         HomeView()
     }
+    .environmentObject(NavigationManager())
 }
