@@ -182,11 +182,11 @@
 		61C1BCCF2B9A55FD00ABAA14 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				61C1BCD02B9A566E00ABAA14 /* LoginView.swift */,
-				61C1BCD52B9A586400ABAA14 /* HomeView.swift */,
-				61C1BCE22B9B661700ABAA14 /* SubjectsView.swift */,
-				61C1BCE42B9B7BF600ABAA14 /* PublicationsView.swift */,
-				61C1BCE62B9B7ED900ABAA14 /* DissertationView.swift */,
+				61C1BCEF2B9B9E1500ABAA14 /* Home */,
+				61C1BCEE2B9B9DFC00ABAA14 /* Dissertation */,
+				61C1BCED2B9B9DF100ABAA14 /* Publications */,
+				61C1BCEC2B9B9DE300ABAA14 /* Subjects */,
+				61C1BCEB2B9B9DDB00ABAA14 /* Login */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +213,46 @@
 				61C1BCD92B9A640700ABAA14 /* ProgressBar.swift */,
 			);
 			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		61C1BCEB2B9B9DDB00ABAA14 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCD02B9A566E00ABAA14 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		61C1BCEC2B9B9DE300ABAA14 /* Subjects */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCE22B9B661700ABAA14 /* SubjectsView.swift */,
+			);
+			path = Subjects;
+			sourceTree = "<group>";
+		};
+		61C1BCED2B9B9DF100ABAA14 /* Publications */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCE42B9B7BF600ABAA14 /* PublicationsView.swift */,
+			);
+			path = Publications;
+			sourceTree = "<group>";
+		};
+		61C1BCEE2B9B9DFC00ABAA14 /* Dissertation */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCE62B9B7ED900ABAA14 /* DissertationView.swift */,
+			);
+			path = Dissertation;
+			sourceTree = "<group>";
+		};
+		61C1BCEF2B9B9E1500ABAA14 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCD52B9A586400ABAA14 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
