@@ -26,11 +26,18 @@ struct SubjectsView: View {
                     Text("1 crédito")
                 }
                 
+                Section("2 SEMESTRE"){
+                    ForEach(0..<3){_ in
+                        SubjectCell()
+                    }
+                }
+                
                 Section("1 SEMESTRE"){
                     ForEach(0..<3){_ in
                         SubjectCell()
                     }
                 }
+                
                 
                 
             }
@@ -44,6 +51,7 @@ struct SubjectsView: View {
                 }label: {
                     Image(systemName: "plus")
                         .bold()
+                        .foregroundStyle(Color.primary)
                 }
             }
         }
@@ -57,7 +65,7 @@ struct SubjectsView: View {
             }
             .bold()
             .foregroundColor(.white)
-            .font(.headline)
+            .font(.system(size: 12, weight: .bold))
             .padding()
             .background(
                 Circle()
@@ -69,7 +77,8 @@ struct SubjectsView: View {
                     .font(.headline)
                 Text("FAZENDO")
                     .foregroundStyle(.white)
-                    .font(.headline)
+                    .font(.caption2)
+                    .bold()
                     .padding(.horizontal, 10)
                     .padding(.vertical, 4)
                     .background(
