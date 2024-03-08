@@ -25,10 +25,13 @@ struct LoginView: View {
                 switch screen {
                 case .home:
                     HomeView()
+                        .navigationBarBackButtonHidden()
                 case .signUp:
                     Text("Cadastro")
                 case .forgotPassword:
                     Text("Esqueci a senha")
+                default:
+                    Text("")
                 }
             }
         }

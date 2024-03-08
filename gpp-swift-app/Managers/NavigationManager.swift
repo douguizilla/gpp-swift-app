@@ -20,4 +20,5 @@ enum Screen : Hashable {
     case home
     case signUp
     case forgotPassword
+    case subjects
 }

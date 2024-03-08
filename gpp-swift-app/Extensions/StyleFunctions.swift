@@ -15,10 +15,20 @@ extension View {
             .padding(.horizontal, padding)
             .background(
                 RoundedRectangle(cornerRadius: 16)
-                    .foregroundColor(
-                        Color(uiColor: .systemGray6)
-                    )
+                    .foregroundStyle(.thinMaterial)
             )
     }
+    
+    func verticalAlignment(_ alignment: Alignment) -> some View {
+        self
+            .frame(maxHeight: .infinity, alignment: alignment)
+    }
+    
+    func horizontalAlignment(_ alignment: Alignment) -> some View {
+        self
+            .frame(maxWidth: .infinity, alignment: alignment)
+    }
+    
+    
 }
 
