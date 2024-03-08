@@ -107,6 +107,7 @@ struct HomeView: View {
                         
                         Text(verbatim: .lorenIpsum)
                     }
+                    .padding(.vertical, 10)
                     .grayBackground(8)
                     
                 }
