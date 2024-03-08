@@ -15,7 +15,7 @@ struct HomeView: View {
             
             ProgressBar(
                 title: "Seus resultados:",
-                value: 21,
+                value: 29,
                 total: 44,
                 label: "créditos totais"
             )
