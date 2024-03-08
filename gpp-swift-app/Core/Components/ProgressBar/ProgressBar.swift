@@ -12,6 +12,8 @@ struct ProgressBar : View {
     let value : CGFloat
     let total : CGFloat
     var label : String = ""
+    var font : Font = .subheadline
+    var height: CGFloat = 95
     
     var body: some View {
         VStack{
@@ -20,7 +22,7 @@ struct ProgressBar : View {
                     let width = proxy.size.width
                     
                     Text(title)
-                        .font(.subheadline)
+                        .font(font)
                         .fontWeight(.semibold)
                         .frame(width: width, alignment: .leading)
                     
@@ -36,13 +38,13 @@ struct ProgressBar : View {
                     }
                     
                     Text("\(Int(value))/\(Int(total)) \(label)")
-                        .font(.subheadline)
+                        .font(font)
                         .fontWeight(.semibold)
                         .frame(width: width, alignment: .trailing)
                 }
             }
         }
-        .frame(height: 95)
+        .frame(height: height)
     }
 }
 

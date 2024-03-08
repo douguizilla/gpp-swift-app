@@ -138,6 +138,8 @@ struct HomeView: View {
                 SubjectsView()
             case .publications:
                 PublicationsView()
+            case .dissertation:
+                PublicationsView()
             }
         }
     }
