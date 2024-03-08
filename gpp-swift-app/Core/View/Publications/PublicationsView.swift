@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PublicationsView: View {
+    @State private var showAddPublicationsView = false
     var body: some View {
         VStack{
             List{
@@ -21,11 +22,17 @@ struct PublicationsView: View {
         .toolbar{
             ToolbarItem(placement: .topBarTrailing) {
                 Button{
+                    showAddPublicationsView.toggle()
                 }label: {
                     Image(systemName: "plus")
                         .bold()
                         .foregroundStyle(Color.primary)
                 }
+            }
+        }
+        .sheet(isPresented: $showAddPublicationsView){
+            NavigationStack{
+                AddPublicationsView()
             }
         }
     }
