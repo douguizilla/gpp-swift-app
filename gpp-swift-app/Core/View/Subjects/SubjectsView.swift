@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SubjectsView: View {
+    @State private var showAddSubjectsView = false
+    
     var body: some View {
         VStack{
             List{
@@ -47,11 +49,17 @@ struct SubjectsView: View {
         .toolbar{
             ToolbarItem(placement: .topBarTrailing) {
                 Button{
+                    showAddSubjectsView.toggle()
                 }label: {
                     Image(systemName: "plus")
                         .bold()
                         .foregroundStyle(Color.primary)
                 }
+            }
+        }
+        .sheet(isPresented: $showAddSubjectsView){
+            NavigationStack{
+                AddSubjectsView()
             }
         }
     }

@@ -22,6 +22,7 @@
 		61C1BCE32B9B661700ABAA14 /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCE22B9B661700ABAA14 /* SubjectsView.swift */; };
 		61C1BCE52B9B7BF600ABAA14 /* PublicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCE42B9B7BF600ABAA14 /* PublicationsView.swift */; };
 		61C1BCE72B9B7ED900ABAA14 /* DissertationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCE62B9B7ED900ABAA14 /* DissertationView.swift */; };
+		61C1BCF12B9B9EFF00ABAA14 /* AddSubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCF02B9B9EFF00ABAA14 /* AddSubjectsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		61C1BCE22B9B661700ABAA14 /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
 		61C1BCE42B9B7BF600ABAA14 /* PublicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationsView.swift; sourceTree = "<group>"; };
 		61C1BCE62B9B7ED900ABAA14 /* DissertationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertationView.swift; sourceTree = "<group>"; };
+		61C1BCF02B9B9EFF00ABAA14 /* AddSubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubjectsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				61C1BCE22B9B661700ABAA14 /* SubjectsView.swift */,
+				61C1BCF02B9B9EFF00ABAA14 /* AddSubjectsView.swift */,
 			);
 			path = Subjects;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */,
 				61C1BCDC2B9A697000ABAA14 /* StyleFunctions.swift in Sources */,
 				61C1BCDA2B9A640700ABAA14 /* ProgressBar.swift in Sources */,
+				61C1BCF12B9B9EFF00ABAA14 /* AddSubjectsView.swift in Sources */,
 				61C1BCD42B9A574500ABAA14 /* NavigationManager.swift in Sources */,
 				61C1BCE72B9B7ED900ABAA14 /* DissertationView.swift in Sources */,
 			);
