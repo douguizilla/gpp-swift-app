@@ -8,11 +8,26 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State var active = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            List{
+                Section{
+                    Toggle(isOn: $active){
+                        Text("Ativar notificações sobre os marcos")
+                            .font(.footnote)
+                    }
+                }
+            }
+        }
+        .background(Color(.secondarySystemBackground))
+        .navigationTitle("Configurações")
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 
 #Preview {
-    SettingsView()
+    NavigationStack{
+        SettingsView()
+    }
 }
