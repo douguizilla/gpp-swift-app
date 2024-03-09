@@ -9,6 +9,13 @@ import SwiftUI
 
 extension View {
     
+    var hasNotch: Bool {
+        let firstScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let firstWindow = firstScene?.windows.first
+        let safeAreaInsetsBottom = firstWindow?.safeAreaInsets.bottom ?? 0
+        return safeAreaInsetsBottom > 0
+    }
+    
     func grayBackground(_ padding: CGFloat = 0) -> some View {
         self
             .padding(padding)
@@ -28,6 +35,13 @@ extension View {
                 RoundedRectangle(cornerRadius: 12)
                     .foregroundStyle(.blue)
             )
+    }
+    
+
+    
+    func paddingNotch() -> some View {
+        self
+            .padding(.top, hasNotch ? 40 : 0)
     }
     
     func verticalAlignment(_ alignment: Alignment) -> some View {
