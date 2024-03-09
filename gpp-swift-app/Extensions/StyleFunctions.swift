@@ -28,6 +28,7 @@ extension View {
     
     func buttonBackground() -> some View {
         self
+            .bold()
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
             .padding()
