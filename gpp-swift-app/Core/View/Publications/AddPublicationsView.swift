@@ -91,7 +91,22 @@ struct AddPublicationsView: View {
                 }
                 
             }
+            
+            Button{
+                
+            }label:{
+                Text("Salvar")
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 12)
+                            .foregroundStyle(.blue)
+                    )
+            }
+            .padding()
         }
+        .background(Color(.secondarySystemBackground))
         .navigationTitle("Publicações")
         .navigationBarTitleDisplayMode(.large)
         .toolbar{
