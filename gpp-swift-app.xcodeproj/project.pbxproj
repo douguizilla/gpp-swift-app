@@ -26,6 +26,10 @@
 		61C1BCF32B9BA4F800ABAA14 /* AddPublicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCF22B9BA4F800ABAA14 /* AddPublicationsView.swift */; };
 		61C1BCF52B9C005300ABAA14 /* SubjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCF42B9C005300ABAA14 /* SubjectDetailView.swift */; };
 		61C1BCF82B9C10FC00ABAA14 /* SideBarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCF72B9C10FB00ABAA14 /* SideBarContainer.swift */; };
+		61C1BCFE2B9CA2A000ABAA14 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCFD2B9CA2A000ABAA14 /* ProfileView.swift */; };
+		61C1BD002B9CA2BC00ABAA14 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCFF2B9CA2BC00ABAA14 /* ChangePasswordView.swift */; };
+		61C1BD022B9CA2CB00ABAA14 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BD012B9CA2CB00ABAA14 /* SettingsView.swift */; };
+		61C1BD042B9CA2D500ABAA14 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BD032B9CA2D500ABAA14 /* HelpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		61C1BCF22B9BA4F800ABAA14 /* AddPublicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPublicationsView.swift; sourceTree = "<group>"; };
 		61C1BCF42B9C005300ABAA14 /* SubjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectDetailView.swift; sourceTree = "<group>"; };
 		61C1BCF72B9C10FB00ABAA14 /* SideBarContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarContainer.swift; sourceTree = "<group>"; };
+		61C1BCFD2B9CA2A000ABAA14 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		61C1BCFF2B9CA2BC00ABAA14 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		61C1BD012B9CA2CB00ABAA14 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		61C1BD032B9CA2D500ABAA14 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,9 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				61C1BCEF2B9B9E1500ABAA14 /* Home */,
-				61C1BCEE2B9B9DFC00ABAA14 /* Dissertation */,
-				61C1BCED2B9B9DF100ABAA14 /* Publications */,
-				61C1BCEC2B9B9DE300ABAA14 /* Subjects */,
 				61C1BCEB2B9B9DDB00ABAA14 /* Login */,
 			);
 			path = View;
@@ -263,6 +268,13 @@
 			isa = PBXGroup;
 			children = (
 				61C1BCD52B9A586400ABAA14 /* HomeView.swift */,
+				61C1BCEE2B9B9DFC00ABAA14 /* Dissertation */,
+				61C1BCED2B9B9DF100ABAA14 /* Publications */,
+				61C1BCEC2B9B9DE300ABAA14 /* Subjects */,
+				61C1BCF92B9CA1BF00ABAA14 /* Profile */,
+				61C1BCFA2B9CA1E100ABAA14 /* ChangePassword */,
+				61C1BCFB2B9CA21B00ABAA14 /* Settings */,
+				61C1BCFC2B9CA22B00ABAA14 /* Help */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -273,6 +285,38 @@
 				61C1BCF72B9C10FB00ABAA14 /* SideBarContainer.swift */,
 			);
 			path = SideBar;
+			sourceTree = "<group>";
+		};
+		61C1BCF92B9CA1BF00ABAA14 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCFD2B9CA2A000ABAA14 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		61C1BCFA2B9CA1E100ABAA14 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCFF2B9CA2BC00ABAA14 /* ChangePasswordView.swift */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		61C1BCFB2B9CA21B00ABAA14 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BD012B9CA2CB00ABAA14 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		61C1BCFC2B9CA22B00ABAA14 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BD032B9CA2D500ABAA14 /* HelpView.swift */,
+			);
+			path = Help;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,11 +454,15 @@
 				61C1BCF82B9C10FC00ABAA14 /* SideBarContainer.swift in Sources */,
 				61C1BCE12B9B638C00ABAA14 /* StringExtension.swift in Sources */,
 				61C1BCD62B9A586400ABAA14 /* HomeView.swift in Sources */,
+				61C1BD022B9CA2CB00ABAA14 /* SettingsView.swift in Sources */,
 				61C1BCE32B9B661700ABAA14 /* SubjectsView.swift in Sources */,
 				61C1BCE52B9B7BF600ABAA14 /* PublicationsView.swift in Sources */,
+				61C1BD002B9CA2BC00ABAA14 /* ChangePasswordView.swift in Sources */,
+				61C1BCFE2B9CA2A000ABAA14 /* ProfileView.swift in Sources */,
 				61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */,
 				61C1BCDC2B9A697000ABAA14 /* StyleFunctions.swift in Sources */,
 				61C1BCDA2B9A640700ABAA14 /* ProgressBar.swift in Sources */,
+				61C1BD042B9CA2D500ABAA14 /* HelpView.swift in Sources */,
 				61C1BCF12B9B9EFF00ABAA14 /* AddSubjectsView.swift in Sources */,
 				61C1BCF32B9BA4F800ABAA14 /* AddPublicationsView.swift in Sources */,
 				61C1BCD42B9A574500ABAA14 /* NavigationManager.swift in Sources */,
@@ -582,6 +630,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"gpp-swift-app/Preview Content\"";
+				DEVELOPMENT_TEAM = F79BYLJ8U5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "GPP-UFU";
@@ -613,6 +662,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"gpp-swift-app/Preview Content\"";
+				DEVELOPMENT_TEAM = F79BYLJ8U5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "GPP-UFU";

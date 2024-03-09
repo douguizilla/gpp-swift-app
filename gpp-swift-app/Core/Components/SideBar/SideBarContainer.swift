@@ -30,8 +30,7 @@ struct SideBarContainer<SideMenu, Content>: View where SideMenu : View, Content 
                 .frame(width: getWidth() - 90)
                 .frame(maxHeight: .infinity)
                 .background(
-                    Color.primary
-                        .opacity(0.04)
+                    Color(.systemBackground)
                         .ignoresSafeArea(.container, edges: .vertical)
                 )
                 .frame(maxWidth: .infinity, alignment: .leading)

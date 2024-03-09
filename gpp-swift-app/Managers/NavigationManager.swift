@@ -26,6 +26,10 @@ enum HomeScreen : Screen {
     case subjects
     case publications
     case dissertation
+    case profile
+    case changePassword
+    case settings
+    case help
 }
 
 protocol Screen : Hashable {}

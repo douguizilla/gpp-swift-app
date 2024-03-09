@@ -9,10 +9,92 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var navigation : NavigationManager
-    @State private var open = false
+    @State private var open = true
     var body: some View {
         SideBarContainer(open: $open) {
-            Text("Oi")
+            VStack(spacing: 20){
+                HStack{
+                    Button{
+                        open.toggle()
+                    }label: {
+                        Image(systemName: "chevron.left")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 20)
+                            .foregroundStyle(.blue)
+                    }
+                    .horizontalAlignment(.leading)
+                }
+                
+                ZStack(alignment: .bottomTrailing){
+                    Circle()
+                        .strokeBorder(.blue, lineWidth: 1)
+                        .background(Circle().fill(.cyan))
+                        .frame(width: 100, height: 100)
+                    
+                    
+                    Image(systemName: "pencil")
+                        .foregroundStyle(Color.primary)
+                        .padding(8)
+                        .background(
+                            Circle()
+                                .foregroundStyle(Color(.systemGray6))
+                        )
+                }
+                
+                VStack(spacing: 6){
+                    Text("Douglas Gomes")
+                        .font(.headline)
+                    
+                    Text("11621BCC013")
+                        .font(.subheadline)
+                    
+                    Text("Redes complexas")
+                        .font(.subheadline)
+                        .italic()
+                }
+                .multilineTextAlignment(.center)
+                
+                MenuButton(
+                    systemName: "person.circle",
+                    label: "Perfil"
+                ){
+                    
+                }
+                
+                MenuButton(
+                    systemName: "lock",
+                    label: "Alterar senha"
+                ){
+                    
+                }
+                
+                MenuButton(
+                    systemName: "gear",
+                    label: "Configurações"
+                ){
+                    
+                }
+                
+                MenuButton(
+                    systemName: "questionmark.circle",
+                    label: "Ajuda"
+                ){
+                    
+                }
+                
+                Spacer()
+                
+                MenuButton(
+                    systemName: "rectangle.portrait.and.arrow.forward",
+                    label: "Sair"
+                ){
+                    
+                }
+                
+            }
+            .verticalAlignment(.top)
+            .padding(.horizontal)
         } content: {
             VStack{
                 VStack{
@@ -145,16 +227,24 @@ struct HomeView: View {
                         .padding()
                     }
                 }
-                .navigationDestination(for: HomeScreen.self) { screen in
-                    switch screen {
-                    case .subjects:
-                        SubjectsView()
-                    case .publications:
-                        PublicationsView()
-                    case .dissertation:
-                        DissertationView()
-                    }
-                }
+            }
+        }
+        .navigationDestination(for: HomeScreen.self) { screen in
+            switch screen {
+            case .subjects:
+                SubjectsView()
+            case .publications:
+                PublicationsView()
+            case .dissertation:
+                DissertationView()
+            case .profile:
+                ProfileView()
+            case .changePassword:
+                ChangePasswordView()
+            case .settings:
+                SettingsView()
+            case .help:
+                HelpView()
             }
         }
         
@@ -179,6 +269,38 @@ struct HomeView: View {
             .frame(maxWidth: .infinity)
             .foregroundColor(.primary)
             .padding(16)
+        }
+    }
+    
+    func MenuButton(
+        systemName: String,
+        label: String,
+        action: @escaping () -> Void
+    ) -> some View {
+        Button(action: action){
+            HStack(spacing: 22){
+                Image(systemName: systemName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 25, height: 25)
+                    .foregroundStyle(Color.primary)
+                
+                Text(label)
+                    .font(.title3)
+                    .foregroundStyle(Color.primary)
+                    .bold()
+                
+                Spacer()
+            }
+            .padding(8)
+            .padding(.vertical, 3)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .foregroundStyle(.bar.opacity(0.4))
+            )
+            .contentShape(
+                RoundedRectangle(cornerRadius: 12)
+            )
         }
     }
 }
