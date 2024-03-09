@@ -44,33 +44,41 @@ struct AddSubjectsView: View {
             .bold()
             .foregroundColor(.white)
             .font(.system(size: 12, weight: .bold))
-            .padding()
             .background(
                 Circle()
                     .foregroundColor(.blue)
+                    .frame(width: 50, height: 50)
+                
             )
+            
+            Spacer()
             
             Text("Analise de Algoritmos")
                 .font(.headline)
                 .multilineTextAlignment(.leading)
-                .horizontalAlignment(.leading)
+                .lineLimit(2)
+            
+            Spacer()
             
             Button{
                 
             }label: {
                 Image(systemName: "plus")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 15)
                     .foregroundStyle(.white)
                     .font(.caption2)
                     .bold()
                     .background(
-                        RoundedRectangle(cornerRadius: 12)
+                        RoundedRectangle(cornerRadius: 5)
                             .foregroundColor(.blue)
-                            .frame(width: 50, height: 50)
+                            .frame(width: 40, height: 40)
                     )
             }
-            .padding(.trailing)
 
         }
+        .padding()
     }
 }
 

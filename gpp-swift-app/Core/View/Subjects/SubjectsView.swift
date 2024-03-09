@@ -30,13 +30,21 @@ struct SubjectsView: View {
                 
                 Section("2 SEMESTRE"){
                     ForEach(0..<3){_ in
-                        SubjectCell()
+                        NavigationLink {
+                            SubjectDetailView()
+                        } label: {
+                            SubjectCell()
+                        }
                     }
                 }
                 
                 Section("1 SEMESTRE"){
                     ForEach(0..<3){_ in
-                        SubjectCell()
+                        NavigationLink {
+                            SubjectDetailView()
+                        } label: {
+                            SubjectCell()
+                        }
                     }
                 }
                 

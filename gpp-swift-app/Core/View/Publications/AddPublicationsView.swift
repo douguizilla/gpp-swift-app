@@ -42,8 +42,13 @@ struct AddPublicationsView: View {
                         ForEach(coauthorList, id: \.id){ coauthor in
                             VStack(alignment: .leading){
                                 Text(coauthor.name + " " + coauthor.lastName)
+                                    .font(.headline)
+                                
                                 Text(coauthor.lattes)
+                                    .font(.subheadline)
+                                
                                 Text(coauthor.affiliation)
+                                    .font(.subheadline)
                             }
                             .swipeActions(allowsFullSwipe: true) {
                                 Button{
@@ -96,13 +101,7 @@ struct AddPublicationsView: View {
                 
             }label:{
                 Text("Salvar")
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .foregroundStyle(.blue)
-                    )
+                    .buttonBackground()
             }
             .padding()
         }

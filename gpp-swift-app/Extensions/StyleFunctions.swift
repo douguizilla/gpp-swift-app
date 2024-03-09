@@ -19,6 +19,17 @@ extension View {
             )
     }
     
+    func buttonBackground() -> some View {
+        self
+            .foregroundStyle(.white)
+            .frame(maxWidth: .infinity)
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .foregroundStyle(.blue)
+            )
+    }
+    
     func verticalAlignment(_ alignment: Alignment) -> some View {
         self
             .frame(maxHeight: .infinity, alignment: alignment)

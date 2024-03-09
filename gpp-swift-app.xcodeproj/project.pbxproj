@@ -24,6 +24,7 @@
 		61C1BCE72B9B7ED900ABAA14 /* DissertationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCE62B9B7ED900ABAA14 /* DissertationView.swift */; };
 		61C1BCF12B9B9EFF00ABAA14 /* AddSubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCF02B9B9EFF00ABAA14 /* AddSubjectsView.swift */; };
 		61C1BCF32B9BA4F800ABAA14 /* AddPublicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCF22B9BA4F800ABAA14 /* AddPublicationsView.swift */; };
+		61C1BCF52B9C005300ABAA14 /* SubjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCF42B9C005300ABAA14 /* SubjectDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		61C1BCE62B9B7ED900ABAA14 /* DissertationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertationView.swift; sourceTree = "<group>"; };
 		61C1BCF02B9B9EFF00ABAA14 /* AddSubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubjectsView.swift; sourceTree = "<group>"; };
 		61C1BCF22B9BA4F800ABAA14 /* AddPublicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPublicationsView.swift; sourceTree = "<group>"; };
+		61C1BCF42B9C005300ABAA14 /* SubjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 			children = (
 				61C1BCE22B9B661700ABAA14 /* SubjectsView.swift */,
 				61C1BCF02B9B9EFF00ABAA14 /* AddSubjectsView.swift */,
+				61C1BCF42B9C005300ABAA14 /* SubjectDetailView.swift */,
 			);
 			path = Subjects;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C1BCD12B9A566E00ABAA14 /* LoginView.swift in Sources */,
+				61C1BCF52B9C005300ABAA14 /* SubjectDetailView.swift in Sources */,
 				61C1BCE12B9B638C00ABAA14 /* StringExtension.swift in Sources */,
 				61C1BCD62B9A586400ABAA14 /* HomeView.swift in Sources */,
 				61C1BCE32B9B661700ABAA14 /* SubjectsView.swift in Sources */,
