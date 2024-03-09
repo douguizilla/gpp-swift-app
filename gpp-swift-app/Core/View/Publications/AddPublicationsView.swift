@@ -19,6 +19,15 @@ struct AddPublicationsView: View {
     @State private var lattes = ""
     @State private var affiliation = ""
     
+    @State private var coauthorList : [Coauthor] = [
+        Coauthor(
+            name: "Douglas",
+            lastName: "Gomes",
+            lattes: "www.yt.com",
+            affiliation: "salinha"
+        )
+    ]
+    
     var body: some View {
         VStack{
             List{
@@ -26,6 +35,30 @@ struct AddPublicationsView: View {
                     TextField("Título", text: $title)
                     TextField("Nome do veículo", text: $vehicleName)
                     TextField("URL", text: $url)
+                }
+                
+                if !coauthorList.isEmpty {
+                    Section("coautores da publicação"){
+                        ForEach(coauthorList, id: \.id){ coauthor in
+                            VStack(alignment: .leading){
+                                Text(coauthor.name + " " + coauthor.lastName)
+                                Text(coauthor.lattes)
+                                Text(coauthor.affiliation)
+                            }
+                            .swipeActions(allowsFullSwipe: true) {
+                                Button{
+                                    withAnimation{
+                                        self.coauthorList.removeAll(where: {
+                                            $0.id == coauthor.id
+                                        })
+                                    }
+                                }label:{
+                                    Image(systemName: "trash")
+                                }
+                                .tint(.red)
+                            }
+                        }
+                    }
                 }
                 
                 Section("add coautores na publicação (opcional)"){
@@ -36,6 +69,14 @@ struct AddPublicationsView: View {
                 }
                 
                 Button{
+                    let coauthor = Coauthor(
+                        name: name,
+                        lastName: lastName,
+                        lattes: lattes,
+                        affiliation: affiliation
+                    )
+                    
+                    coauthorList.append(coauthor)
                     
                 }label: {
                     HStack{
@@ -65,6 +106,15 @@ struct AddPublicationsView: View {
             }
         }
     }
+}
+
+struct Coauthor : Identifiable {
+    let id = UUID().uuidString
+    var name = ""
+    var lastName = ""
+    var lattes = ""
+    var affiliation = ""
+    
 }
 
 #Preview {
