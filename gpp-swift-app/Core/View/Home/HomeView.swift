@@ -98,7 +98,7 @@ struct HomeView: View {
                     systemName: "rectangle.portrait.and.arrow.forward",
                     label: "Sair"
                 ){
-                    
+                    navigation.logout()
                 }
                 
             }

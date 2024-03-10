@@ -14,6 +14,10 @@ class NavigationManager : ObservableObject {
     func navigate(to screen: any Screen) {
         path.append(screen)
     }
+    
+    func logout(){
+        self.path = NavigationPath()
+    }
 }
 
 enum LoginScreen : Screen {

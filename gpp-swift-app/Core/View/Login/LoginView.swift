@@ -21,6 +21,13 @@ struct LoginView: View {
                     Text("Entrar")
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                Image("backgroundImage")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill()
+            )
             .navigationDestination(for: LoginScreen.self) { screen in
                 switch screen {
                 case .home:
