@@ -12,10 +12,14 @@ struct GoalsView: View {
         VStack{
             ScrollView{
                 VStack(spacing: 0){
-                    ForEach(0..<6, id:\.self){ index in
-                        GoalCell(
-                            goal: Goal.sample, index: index, total: 6
-                        )
+                    ForEach(Goal.sampleList.indices, id:\.self){ index in
+                        let goal = Goal.sampleList[index]
+                        NavigationLink(value: goal) {
+                            GoalCell(
+                                goal: goal, index: index, total: Goal.sampleList.count
+                            )
+                            .foregroundStyle(Color.primary)
+                        }
                     }
                 }
                 .padding()
@@ -23,6 +27,9 @@ struct GoalsView: View {
         }
         .navigationTitle("Marcos temporais")
         .navigationBarTitleDisplayMode(.large)
+        .navigationDestination(for: Goal.self) { goal in
+            GoalDetailView(goal: goal)
+        }
     }
     
     func GoalCell(
@@ -46,7 +53,7 @@ struct GoalsView: View {
             }
             
             VStack(spacing: 12){
-                GoalInfo()
+                GoalInfo(goal: goal)
                 
                 Divider()
                 

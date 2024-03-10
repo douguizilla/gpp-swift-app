@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct GoalInfo : View {
-    var goal : Goal = Goal.sample
+    var goal : Goal
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5){
             Text(goal.title)
+                .multilineTextAlignment(.leading)
                 .lineLimit(2)
                 .font(.title2)
                 .bold()
@@ -33,5 +34,5 @@ struct GoalInfo : View {
 }
 
 #Preview {
-    GoalInfo()
+    GoalInfo(goal: Goal.sample)
 }

@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct GoalDetailView: View {
-    var goal: Goal = Goal.sample
+    var goal: Goal = Goal.sampleList[1]
     var body: some View {
         VStack{
             ScrollView {
                 VStack(alignment: .leading, spacing: 10){
+                    Text(goal.title)
+                        .font(.largeTitle)
+                        .bold()
+                        .horizontalAlignment(.leading)
+                    
                     Text("Número do processo SEI: ")
                         .bold()
                     + Text(goal.numberSEI)
@@ -70,7 +75,7 @@ struct GoalDetailView: View {
                     .padding()
             }
         }
-        .navigationTitle(goal.title)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
