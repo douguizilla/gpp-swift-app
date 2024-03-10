@@ -228,7 +228,7 @@ struct HomeView: View {
             Text("Sua próxima entrega:")
                 .font(.subheadline)
             
-            NavigationLink(value: Goal.sample) {
+            NavigationLink(value: goal) {
                 HStack(alignment: .top){
                     InfoCircle(topLabel: "25", botLabel: "JAN")
                     GoalInfo(goal: goal)

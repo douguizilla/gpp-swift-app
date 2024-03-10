@@ -26,6 +26,7 @@ struct GoalInfo : View {
                 .font(.subheadline)
             
             Text(goal.description)
+                .multilineTextAlignment(.leading)
                 .lineLimit(2)
                 .font(.subheadline)
         }
