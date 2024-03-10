@@ -26,14 +26,14 @@ extension View {
             )
     }
     
-    func buttonBackground() -> some View {
+    func buttonBackground(short: Bool = false) -> some View {
         self
             .bold()
             .foregroundStyle(.white)
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: short ? nil : .infinity)
             .padding()
             .background(
-                RoundedRectangle(cornerRadius: 12)
+                Capsule()
                     .foregroundStyle(.blue)
             )
     }

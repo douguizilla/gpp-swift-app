@@ -5,7 +5,7 @@
 //  Created by Douglas Gomes de Paula on 10/03/24.
 //
 
-import Foundation
+import SwiftUI
 
 struct Goal : Codable, Identifiable {
     var id: String = UUID().uuidString
@@ -29,4 +29,12 @@ struct Goal : Codable, Identifiable {
         credits: "5",
         status: "não iniciado"
     )
+    
+    var hasMandatoryDocLabel : String {
+        hasMandatoryDoc ? "SIM" : "NÃO"
+    }
+    
+    var hasMandatoryDocLabelColor : Color {
+        hasMandatoryDoc ? .green : .red
+    }
 }

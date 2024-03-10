@@ -52,12 +52,12 @@ struct GoalsView: View {
                 
                 HStack{
                     Text("ver detalhes")
-                        .fontWeight(.semibold)
                     
                     Spacer()
                     
                     Image(systemName: "chevron.right")
                 }
+                .foregroundStyle(.blue)
             }
             .padding(.vertical, 8)
             .grayBackground(8)
