@@ -19,13 +19,13 @@ struct LoginView: View {
             path: $navigation.path
         ){
             VStack(spacing: 16){
-                VStack{
+                HStack{
                     Image("ufu-logo")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 60)
                     
-                    Text("PÓS")
+                    Text("GPP")
                         .font(.system(size: 32))
                         .foregroundStyle(.white)
                         .bold()
@@ -74,7 +74,7 @@ struct LoginView: View {
                         .navigationBarBackButtonHidden()
                         .environmentObject(navigation)
                 case .signUp:
-                    SignUpView()
+                    SignUpRequest()
                         .environmentObject(navigation)
                 case .forgotPassword:
                     ForgotPasswordRequestView()

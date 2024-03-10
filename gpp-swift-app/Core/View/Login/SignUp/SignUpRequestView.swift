@@ -1,5 +1,5 @@
 //
-//  ForgotPasswordTokenValidationView.swift
+//  SignUpView.swift
 //  gpp-swift-app
 //
 //  Created by Douglas Gomes de Paula on 10/03/24.
@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct ForgotPasswordTokenValidationView: View {
+struct SignUpRequest: View {
     @EnvironmentObject var navigation : NavigationManager
     
-    @State private var token = ""
+    @State private var email = ""
+    @State private var registration = ""
     
     @State private var navigate = false
     
@@ -22,7 +23,7 @@ struct ForgotPasswordTokenValidationView: View {
                     .scaledToFit()
                     .frame(width: 60)
                 
-                Text("Esqueceu a senha")
+                Text("Cadastrar")
                     .font(.system(size: 32))
                     .foregroundStyle(.white)
                     .bold()
@@ -30,33 +31,29 @@ struct ForgotPasswordTokenValidationView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             
             
-            TextField("Token", text: $token)
+            TextField("E-mail", text: $email)
+                .capsuleFieldStyle()
+            
+            TextField("Matrícula", text: $registration)
                 .capsuleFieldStyle()
             
             Button{
                 navigate.toggle()
             }label: {
-                Text("Validar token")
+                Text("Confirmar")
                     .buttonBackground()
-            }
-            
-            Button{
-                
-            }label: {
-                Text("Reenviar token")
-                    .secondaryButtonBackground()
             }
         }
         .blueBackground()
         .navigationDestination(isPresented: $navigate) {
-            ForgotPasswordChangeView()
+            SignUpTokenValidation()
         }
     }
 }
 
 #Preview {
     NavigationStack{
-        ForgotPasswordTokenValidationView()
+        SignUpRequest()
             .environmentObject(NavigationManager())
     }
 }

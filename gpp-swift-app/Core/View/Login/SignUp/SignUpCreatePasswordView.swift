@@ -1,5 +1,5 @@
 //
-//  SignUpView.swift
+//  SignUpCreatePasswordView.swift
 //  gpp-swift-app
 //
 //  Created by Douglas Gomes de Paula on 10/03/24.
@@ -7,15 +7,20 @@
 
 import SwiftUI
 
-struct SignUpView: View {
+struct SignUpCreatePasswordView: View {
     @EnvironmentObject var navigation : NavigationManager
     
-    @State private var email = ""
-    @State private var registration = ""
+    @State private var showNewPassword = false
+    @State private var newPassword = ""
     
+    @State private var showConfirmPassword = false
+    @State private var confirmPassword = ""
+    
+    @State private var lattes = ""
+        
     var body: some View {
         VStack(spacing: 16){
-            VStack(alignment: .leading){
+            HStack{
                 Image("ufu-logo")
                     .resizable()
                     .scaledToFit()
@@ -29,14 +34,17 @@ struct SignUpView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             
             
-            TextField("E-mail", text: $email)
+            PasswordTextField("Nova senha", text: $newPassword, showPassword: $showNewPassword)
                 .capsuleFieldStyle()
             
-            TextField("Matrícula", text: $registration)
+            PasswordTextField("Confirmar senha", text: $confirmPassword, showPassword: $showConfirmPassword)
+                .capsuleFieldStyle()
+            
+            TextField("Link do lattes", text: $lattes)
                 .capsuleFieldStyle()
             
             Button{
-                
+                navigation.logout()
             }label: {
                 Text("Confirmar")
                     .buttonBackground()
@@ -47,8 +55,5 @@ struct SignUpView: View {
 }
 
 #Preview {
-    NavigationStack{
-        SignUpView()
-            .environmentObject(NavigationManager())
-    }
+    SignUpCreatePasswordView()
 }

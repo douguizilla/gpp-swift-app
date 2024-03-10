@@ -16,7 +16,7 @@ struct ForgotPasswordRequestView: View {
     
     var body: some View {
         VStack(spacing: 16){
-            VStack(alignment: .leading){
+            HStack{
                 Image("ufu-logo")
                     .resizable()
                     .scaledToFit()
