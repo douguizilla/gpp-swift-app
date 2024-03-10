@@ -10,13 +10,17 @@ import SwiftUI
 struct LoginView: View {
     @StateObject var navigation = NavigationManager()
     
+    @State private var email = ""
+    @State private var password = ""
+    @State private var showPassword = false
+    
     var body: some View {
         NavigationStack(
             path: $navigation.path
         ){
             ZStack(alignment: .bottom){
                 VStack(spacing: 16){
-                    VStack(){
+                    VStack{
                         Image("ufu-logo")
                             .resizable()
                             .scaledToFit()
@@ -29,11 +33,12 @@ struct LoginView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    TextField("E-mail", text: .constant(""))
-                        .textFieldStyle(.roundedBorder)
                     
-                    PasswordTextField("Senha", text: .constant(""), showPassword: .constant(false))
-                        .textFieldStyle(.roundedBorder)
+                    TextField("E-mail", text: $email)
+                        .capsuleFieldStyle()
+                    
+                    PasswordTextField("Senha", text: $password, showPassword: $showPassword)
+                        .capsuleFieldStyle()
                     
                     Button{
                         navigation.navigate(to: LoginScreen.home)
@@ -56,7 +61,7 @@ struct LoginView: View {
                         navigation.navigate(to: LoginScreen.signUp)
                     }label: {
                         HStack{
-                            Text("Ainda nãon tem conta? ") + Text("Cadastre-se").bold()
+                            Text("Ainda não tem conta? ") + Text("Cadastre-se").bold()
                         }
                         .foregroundStyle(.white)
                     }

@@ -35,10 +35,21 @@ extension View {
             .background(
                 Capsule()
                     .foregroundStyle(.blue)
+                    .frame(height: 50)
             )
     }
     
-
+    func capsuleFieldStyle() -> some View {
+        self
+            .padding()
+            .background(
+                Capsule()
+                    .foregroundStyle(
+                        Color(UIColor.systemBackground)
+                    )
+                    .frame(height: 50)
+            )
+    }
     
     func paddingNotch() -> some View {
         self

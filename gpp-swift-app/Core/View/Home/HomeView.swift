@@ -64,32 +64,36 @@ struct HomeView: View {
                 }
                 .multilineTextAlignment(.center)
                 
-                MenuButton(
-                    systemName: "person.circle",
-                    label: "Perfil"
-                ){
-                    navigation.navigate(to: HomeScreen.profile)
-                }
-                
-                MenuButton(
-                    systemName: "lock",
-                    label: "Alterar senha"
-                ){
-                    navigation.navigate(to: HomeScreen.changePassword)
-                }
-                
-                MenuButton(
-                    systemName: "gear",
-                    label: "Configurações"
-                ){
-                    navigation.navigate(to: HomeScreen.settings)
-                }
-                
-                MenuButton(
-                    systemName: "questionmark.circle",
-                    label: "Ajuda"
-                ){
-                    navigation.navigate(to: HomeScreen.help)
+                ScrollView{
+                    VStack {
+                        MenuButton(
+                            systemName: "person.circle",
+                            label: "Perfil"
+                        ){
+                            navigation.navigate(to: HomeScreen.profile)
+                        }
+                        
+                        MenuButton(
+                            systemName: "lock",
+                            label: "Alterar senha"
+                        ){
+                            navigation.navigate(to: HomeScreen.changePassword)
+                        }
+                        
+                        MenuButton(
+                            systemName: "gear",
+                            label: "Configurações"
+                        ){
+                            navigation.navigate(to: HomeScreen.settings)
+                        }
+                        
+                        MenuButton(
+                            systemName: "questionmark.circle",
+                            label: "Ajuda"
+                        ){
+                            navigation.navigate(to: HomeScreen.help)
+                        }
+                    }
                 }
                 
                 Spacer()
@@ -100,6 +104,7 @@ struct HomeView: View {
                 ){
                     navigation.logout()
                 }
+                .padding(.bottom)
                 
             }
             .verticalAlignment(.top)
