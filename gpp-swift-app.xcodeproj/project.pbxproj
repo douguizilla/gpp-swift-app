@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		612E5CFA2B9E36DA0065B885 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5CF92B9E36DA0065B885 /* ColorExtensions.swift */; };
+		612E5CFD2B9E3CC00065B885 /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5CFC2B9E3CC00065B885 /* GoalsView.swift */; };
+		612E5D002B9E3FED0065B885 /* InfoCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5CFF2B9E3FED0065B885 /* InfoCircle.swift */; };
+		612E5D022B9E45080065B885 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D012B9E45080065B885 /* Goal.swift */; };
+		612E5D042B9E45680065B885 /* GoalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D032B9E45680065B885 /* GoalInfo.swift */; };
 		61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCA12B9A4F4500ABAA14 /* GppApp.swift */; };
 		61C1BCA62B9A4F4700ABAA14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C1BCA52B9A4F4700ABAA14 /* Assets.xcassets */; };
 		61C1BCA92B9A4F4700ABAA14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C1BCA82B9A4F4700ABAA14 /* Preview Assets.xcassets */; };
@@ -51,6 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		612E5CF92B9E36DA0065B885 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		612E5CFC2B9E3CC00065B885 /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		612E5CFF2B9E3FED0065B885 /* InfoCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCircle.swift; sourceTree = "<group>"; };
+		612E5D012B9E45080065B885 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		612E5D032B9E45680065B885 /* GoalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalInfo.swift; sourceTree = "<group>"; };
 		61C1BC9E2B9A4F4500ABAA14 /* gpp-swift-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gpp-swift-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C1BCA12B9A4F4500ABAA14 /* GppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GppApp.swift; sourceTree = "<group>"; };
 		61C1BCA52B9A4F4700ABAA14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +115,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		612E5CFB2B9E3BFF0065B885 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				612E5CFC2B9E3CC00065B885 /* GoalsView.swift */,
+				612E5D032B9E45680065B885 /* GoalInfo.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		612E5CFE2B9E3FDE0065B885 /* InfoCircle */ = {
+			isa = PBXGroup;
+			children = (
+				612E5CFF2B9E3FED0065B885 /* InfoCircle.swift */,
+			);
+			path = InfoCircle;
+			sourceTree = "<group>";
+		};
 		61C1BC952B9A4F4500ABAA14 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +213,7 @@
 			children = (
 				61C1BCDB2B9A697000ABAA14 /* StyleFunctions.swift */,
 				61C1BCE02B9B638C00ABAA14 /* StringExtension.swift */,
+				612E5CF92B9E36DA0065B885 /* ColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -193,6 +221,7 @@
 		61C1BCCE2B9A54C600ABAA14 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				612E5D012B9E45080065B885 /* Goal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +246,7 @@
 		61C1BCD72B9A63EB00ABAA14 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				612E5CFE2B9E3FDE0065B885 /* InfoCircle */,
 				61C1BD052B9CA7FF00ABAA14 /* PasswordTextField */,
 				61C1BCF62B9C0FA100ABAA14 /* SideBar */,
 				61C1BCD82B9A63F200ABAA14 /* ProgressBar */,
@@ -271,9 +301,10 @@
 			isa = PBXGroup;
 			children = (
 				61C1BCD52B9A586400ABAA14 /* HomeView.swift */,
+				61C1BCEC2B9B9DE300ABAA14 /* Subjects */,
 				61C1BCEE2B9B9DFC00ABAA14 /* Dissertation */,
 				61C1BCED2B9B9DF100ABAA14 /* Publications */,
-				61C1BCEC2B9B9DE300ABAA14 /* Subjects */,
+				612E5CFB2B9E3BFF0065B885 /* Goals */,
 				61C1BCF92B9CA1BF00ABAA14 /* Profile */,
 				61C1BCFA2B9CA1E100ABAA14 /* ChangePassword */,
 				61C1BCFB2B9CA21B00ABAA14 /* Settings */,
@@ -461,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C1BCD12B9A566E00ABAA14 /* LoginView.swift in Sources */,
+				612E5D002B9E3FED0065B885 /* InfoCircle.swift in Sources */,
 				61C1BCF52B9C005300ABAA14 /* SubjectDetailView.swift in Sources */,
 				61C1BCF82B9C10FC00ABAA14 /* SideBarContainer.swift in Sources */,
 				61C1BCE12B9B638C00ABAA14 /* StringExtension.swift in Sources */,
@@ -471,12 +503,16 @@
 				61C1BD072B9CA81800ABAA14 /* PasswordTextField.swift in Sources */,
 				61C1BD002B9CA2BC00ABAA14 /* ChangePasswordView.swift in Sources */,
 				61C1BCFE2B9CA2A000ABAA14 /* ProfileView.swift in Sources */,
+				612E5CFA2B9E36DA0065B885 /* ColorExtensions.swift in Sources */,
 				61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */,
 				61C1BCDC2B9A697000ABAA14 /* StyleFunctions.swift in Sources */,
 				61C1BCDA2B9A640700ABAA14 /* ProgressBar.swift in Sources */,
+				612E5D042B9E45680065B885 /* GoalInfo.swift in Sources */,
 				61C1BD042B9CA2D500ABAA14 /* HelpView.swift in Sources */,
 				61C1BCF12B9B9EFF00ABAA14 /* AddSubjectsView.swift in Sources */,
 				61C1BCF32B9BA4F800ABAA14 /* AddPublicationsView.swift in Sources */,
+				612E5CFD2B9E3CC00065B885 /* GoalsView.swift in Sources */,
+				612E5D022B9E45080065B885 /* Goal.swift in Sources */,
 				61C1BCD42B9A574500ABAA14 /* NavigationManager.swift in Sources */,
 				61C1BCE72B9B7ED900ABAA14 /* DissertationView.swift in Sources */,
 			);

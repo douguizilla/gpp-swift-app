@@ -9,9 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var navigation : NavigationManager
-    @State private var open = true
+    @State private var open = false
     var body: some View {
-        SideBarContainer(open: $open) {
+        SideBarContainer(open: $open){
             VStack(spacing: 20){
                 HStack{
                     Button{
@@ -46,8 +46,17 @@ struct HomeView: View {
                     Text("Douglas Gomes")
                         .font(.headline)
                     
-                    Text("11621BCC013")
-                        .font(.subheadline)
+                    HStack(spacing: 5){
+                        
+                        Text("11621BCC013")
+                            .font(.subheadline)
+                        
+                        Text("-")
+                        
+                        Text("Mestrado")
+                            .font(.subheadline)
+                        
+                    }
                     
                     Text("Redes complexas")
                         .font(.subheadline)
@@ -175,8 +184,9 @@ struct HomeView: View {
                                     .font(.headline)
                                 
                                 HStack(alignment: .top){
-                                    VStack{
+                                    VStack(spacing: 0){
                                         Text("25")
+                                            .font(.headline)
                                         Text("JAN")
                                     }
                                     .bold()
@@ -186,6 +196,7 @@ struct HomeView: View {
                                     .background(
                                         Circle()
                                             .foregroundColor(.blue)
+                                            .frame(width: 50, height: 50)
                                     )
                                     
                                     VStack(alignment: .leading){

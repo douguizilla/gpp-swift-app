@@ -71,7 +71,7 @@ struct AddSubjectsView: View {
                     .font(.caption2)
                     .bold()
                     .background(
-                        RoundedRectangle(cornerRadius: 5)
+                        Circle()
                             .foregroundColor(.blue)
                             .frame(width: 40, height: 40)
                     )
