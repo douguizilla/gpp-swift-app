@@ -26,6 +26,7 @@ enum HomeScreen : Screen {
     case subjects
     case publications
     case dissertation
+    case goals
     case profile
     case changePassword
     case settings

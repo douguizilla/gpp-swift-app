@@ -178,52 +178,8 @@ struct HomeView: View {
                                 
                             }
                             
+                            NextGoalCard(goal: Goal.sample)
                             
-                            VStack(alignment: .leading, spacing: 10){
-                                Text("Sua próxima entrega:")
-                                    .font(.headline)
-                                
-                                HStack(alignment: .top){
-                                    VStack(spacing: 0){
-                                        Text("25")
-                                            .font(.headline)
-                                        Text("JAN")
-                                    }
-                                    .bold()
-                                    .foregroundColor(.white)
-                                    .font(.caption)
-                                    .padding()
-                                    .background(
-                                        Circle()
-                                            .foregroundColor(.blue)
-                                            .frame(width: 50, height: 50)
-                                    )
-                                    
-                                    VStack(alignment: .leading){
-                                        Text("Marco 1 - 25/01/2024 (Hoje)")
-                                            .font(.headline)
-                                        Text("Status: pendente")
-                                            .font(.subheadline)
-                                        Text("Descrição aqui quando tiver uma dispon[ivel uashduahsduahsd audhuashduhasd ")
-                                            .font(.subheadline)
-                                            .lineLimit(2)
-                                    }
-                                }
-                                
-                                Divider()
-                                
-                                HStack{
-                                    Text("ver todos")
-                                        .font(.subheadline)
-                                    
-                                    Spacer()
-                                    
-                                    Image(systemName: "chevron.right")
-                                }
-                                .padding(.bottom, 5)
-                                
-                            }
-                            .grayBackground(8)
                             
                             VStack(alignment: .leading){
                                 Text("Recados")
@@ -248,6 +204,8 @@ struct HomeView: View {
                 PublicationsView()
             case .dissertation:
                 DissertationView()
+            case .goals:
+                GoalsView()
             case .profile:
                 ProfileView()
             case .changePassword:
@@ -256,9 +214,46 @@ struct HomeView: View {
                 SettingsView()
             case .help:
                 HelpView()
+            
             }
         }
+        .navigationDestination(for: Goal.self) { goal in
+            GoalDetailView(goal: goal)
+        }
         
+    }
+    
+    func NextGoalCard(goal: Goal)->some View {
+        VStack(alignment: .leading, spacing: 10){
+            Text("Sua próxima entrega:")
+                .font(.subheadline)
+            
+            NavigationLink(value: Goal.sample) {
+                HStack(alignment: .top){
+                    InfoCircle(topLabel: "25", botLabel: "JAN")
+                    GoalInfo(goal: goal)
+                }
+                .foregroundStyle(Color.primary)
+            }
+            
+            Divider()
+            
+            Button{
+                navigation.navigate(to: HomeScreen.goals)
+            }label: {
+                HStack{
+                    Text("ver todos")
+                        .font(.subheadline)
+                    
+                    Spacer()
+                    
+                    Image(systemName: "chevron.right")
+                }
+                .padding(.bottom, 5)
+            }
+            
+        }
+        .grayBackground(8)
     }
     
     func GButton(
