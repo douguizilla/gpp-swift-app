@@ -14,7 +14,7 @@ struct SettingsView: View {
             List{
                 Section{
                     Toggle(isOn: $active){
-                        Text("Ativar notificações sobre os marcos")
+                        Text("Ativar notificações sobre os marcos temporais")
                             .font(.footnote)
                     }
                 }
