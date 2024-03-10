@@ -10,7 +10,9 @@ import SwiftUI
 struct ForgotPasswordTokenValidationView: View {
     @EnvironmentObject var navigation : NavigationManager
     
-    @State private var email = ""
+    @State private var token = ""
+    
+    @State private var navigate = false
     
     var body: some View {
         VStack(spacing: 16){
@@ -28,13 +30,13 @@ struct ForgotPasswordTokenValidationView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             
             
-            TextField("E-mail", text: $email)
+            TextField("Token", text: $token)
                 .capsuleFieldStyle()
             
             Button{
-                
+                navigate.toggle()
             }label: {
-                Text("Solicitar token")
+                Text("Validar token")
                     .buttonBackground()
             }
             
@@ -46,6 +48,9 @@ struct ForgotPasswordTokenValidationView: View {
             }
         }
         .blueBackground()
+        .navigationDestination(isPresented: $navigate) {
+            ForgotPasswordChangeView()
+        }
     }
 }
 

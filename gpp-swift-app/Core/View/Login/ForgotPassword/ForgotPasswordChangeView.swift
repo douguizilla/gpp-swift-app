@@ -15,7 +15,7 @@ struct ForgotPasswordChangeView: View {
     
     @State private var showConfirmPassword = false
     @State private var confirmPassword = ""
-    
+        
     var body: some View {
         VStack(spacing: 16){
             VStack(alignment: .leading){
@@ -39,7 +39,7 @@ struct ForgotPasswordChangeView: View {
                 .capsuleFieldStyle()
             
             Button{
-                
+                navigation.logout()
             }label: {
                 Text("Confirmar")
                     .buttonBackground()

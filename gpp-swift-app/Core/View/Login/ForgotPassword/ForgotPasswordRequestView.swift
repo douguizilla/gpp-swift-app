@@ -12,6 +12,8 @@ struct ForgotPasswordRequestView: View {
     
     @State private var email = ""
     
+    @State private var navigate = false
+    
     var body: some View {
         VStack(spacing: 16){
             VStack(alignment: .leading){
@@ -32,13 +34,16 @@ struct ForgotPasswordRequestView: View {
                 .capsuleFieldStyle()
             
             Button{
-                
+                navigate.toggle()
             }label: {
                 Text("Solicitar token")
                     .buttonBackground()
             }
         }
         .blueBackground()
+        .navigationDestination(isPresented: $navigate) {
+            ForgotPasswordTokenValidationView()
+        }
     }
 }
 
