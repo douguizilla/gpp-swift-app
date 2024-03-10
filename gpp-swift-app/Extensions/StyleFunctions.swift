@@ -39,6 +39,29 @@ extension View {
             )
     }
     
+    func blueBackground() -> some View {
+        ZStack(alignment: .bottom){
+            self
+                .padding()
+                .padding(.vertical,62)
+                .background(
+                    Rectangle()
+                        .foregroundStyle(Color.backgroundBlue)
+                        .clipShape(
+                            .rect(topLeadingRadius: 50, bottomLeadingRadius: 0, bottomTrailingRadius: 0, topTrailingRadius: 50)
+                        )
+                        .ignoresSafeArea()
+                )
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+        .background(
+            Image("backgroundImage")
+                .resizable()
+                .ignoresSafeArea()
+                .scaledToFill()
+        )
+    }
+    
     func capsuleFieldStyle() -> some View {
         self
             .padding()

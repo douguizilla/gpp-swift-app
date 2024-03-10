@@ -135,6 +135,20 @@
 			path = InfoCircle;
 			sourceTree = "<group>";
 		};
+		612E5D072B9E63D60065B885 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		612E5D082B9E63E10065B885 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		61C1BC952B9A4F4500ABAA14 = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +282,8 @@
 		61C1BCEB2B9B9DDB00ABAA14 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				612E5D082B9E63E10065B885 /* SignUp */,
+				612E5D072B9E63D60065B885 /* ForgotPassword */,
 				61C1BCD02B9A566E00ABAA14 /* LoginView.swift */,
 			);
 			path = Login;
