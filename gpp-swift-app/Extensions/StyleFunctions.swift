@@ -39,11 +39,28 @@ extension View {
             )
     }
     
+    func secondaryButtonBackground(short: Bool = false) -> some View {
+        self
+            .bold()
+            .foregroundStyle(Color.primary)
+            .frame(maxWidth: short ? nil : .infinity)
+            .padding()
+            .background(
+                Capsule()
+                    .foregroundStyle(
+                        Color(UIColor.systemBackground)
+                    )
+                    .frame(height: 50)
+            )
+    }
+    
+    
+    
     func blueBackground() -> some View {
         ZStack(alignment: .bottom){
             self
                 .padding()
-                .padding(.vertical,62)
+                .padding(.vertical, 50)
                 .background(
                     Rectangle()
                         .foregroundStyle(Color.backgroundBlue)
@@ -53,7 +70,11 @@ extension View {
                         .ignoresSafeArea()
                 )
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+        .frame(
+            maxWidth: .infinity,
+            maxHeight: .infinity,
+            alignment: .bottom
+        )
         .background(
             Image("backgroundImage")
                 .resizable()

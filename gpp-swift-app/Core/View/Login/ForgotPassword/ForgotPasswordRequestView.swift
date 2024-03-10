@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ForgotPasswordView: View {
+struct ForgotPasswordRequestView: View {
     @EnvironmentObject var navigation : NavigationManager
     
     @State private var email = ""
@@ -32,7 +32,7 @@ struct ForgotPasswordView: View {
                 .capsuleFieldStyle()
             
             Button{
-                navigation.navigate(to: LoginScreen.home)
+                
             }label: {
                 Text("Solicitar token")
                     .buttonBackground()
@@ -44,7 +44,7 @@ struct ForgotPasswordView: View {
 
 #Preview {
     NavigationStack{
-        ForgotPasswordView()
+        ForgotPasswordRequestView()
             .environmentObject(NavigationManager())
     }
 }

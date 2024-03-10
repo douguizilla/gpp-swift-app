@@ -77,7 +77,7 @@ struct LoginView: View {
                     SignUpView()
                         .environmentObject(navigation)
                 case .forgotPassword:
-                    ForgotPasswordView()
+                    ForgotPasswordRequestView()
                         .environmentObject(navigation)
                 }
             }
