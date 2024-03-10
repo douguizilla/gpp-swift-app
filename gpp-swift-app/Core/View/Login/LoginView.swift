@@ -72,10 +72,13 @@ struct LoginView: View {
                 case .home:
                     HomeView()
                         .navigationBarBackButtonHidden()
+                        .environmentObject(navigation)
                 case .signUp:
-                    Text("Cadastro")
+                    SignUpView()
+                        .environmentObject(navigation)
                 case .forgotPassword:
-                    Text("Esqueci a senha")
+                    ForgotPasswordView()
+                        .environmentObject(navigation)
                 }
             }
         }

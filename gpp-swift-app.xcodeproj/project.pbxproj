@@ -13,6 +13,8 @@
 		612E5D022B9E45080065B885 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D012B9E45080065B885 /* Goal.swift */; };
 		612E5D042B9E45680065B885 /* GoalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D032B9E45680065B885 /* GoalInfo.swift */; };
 		612E5D062B9E4C4E0065B885 /* GoalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D052B9E4C4E0065B885 /* GoalDetailView.swift */; };
+		612E5D0A2B9E65AC0065B885 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D092B9E65AC0065B885 /* ForgotPasswordView.swift */; };
+		612E5D0C2B9E666D0065B885 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D0B2B9E666D0065B885 /* SignUpView.swift */; };
 		61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCA12B9A4F4500ABAA14 /* GppApp.swift */; };
 		61C1BCA62B9A4F4700ABAA14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C1BCA52B9A4F4700ABAA14 /* Assets.xcassets */; };
 		61C1BCA92B9A4F4700ABAA14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C1BCA82B9A4F4700ABAA14 /* Preview Assets.xcassets */; };
@@ -63,6 +65,8 @@
 		612E5D012B9E45080065B885 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		612E5D032B9E45680065B885 /* GoalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalInfo.swift; sourceTree = "<group>"; };
 		612E5D052B9E4C4E0065B885 /* GoalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailView.swift; sourceTree = "<group>"; };
+		612E5D092B9E65AC0065B885 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		612E5D0B2B9E666D0065B885 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		61C1BC9E2B9A4F4500ABAA14 /* gpp-swift-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gpp-swift-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C1BCA12B9A4F4500ABAA14 /* GppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GppApp.swift; sourceTree = "<group>"; };
 		61C1BCA52B9A4F4700ABAA14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		612E5D072B9E63D60065B885 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
+				612E5D092B9E65AC0065B885 /* ForgotPasswordView.swift */,
 			);
 			path = ForgotPassword;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 		612E5D082B9E63E10065B885 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				612E5D0B2B9E666D0065B885 /* SignUpView.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 				61C1BCD62B9A586400ABAA14 /* HomeView.swift in Sources */,
 				61C1BD022B9CA2CB00ABAA14 /* SettingsView.swift in Sources */,
 				61C1BCE32B9B661700ABAA14 /* SubjectsView.swift in Sources */,
+				612E5D0A2B9E65AC0065B885 /* ForgotPasswordView.swift in Sources */,
 				61C1BCE52B9B7BF600ABAA14 /* PublicationsView.swift in Sources */,
 				61C1BD072B9CA81800ABAA14 /* PasswordTextField.swift in Sources */,
 				612E5D062B9E4C4E0065B885 /* GoalDetailView.swift in Sources */,
@@ -525,6 +532,7 @@
 				61C1BCFE2B9CA2A000ABAA14 /* ProfileView.swift in Sources */,
 				612E5CFA2B9E36DA0065B885 /* ColorExtensions.swift in Sources */,
 				61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */,
+				612E5D0C2B9E666D0065B885 /* SignUpView.swift in Sources */,
 				61C1BCDC2B9A697000ABAA14 /* StyleFunctions.swift in Sources */,
 				61C1BCDA2B9A640700ABAA14 /* ProgressBar.swift in Sources */,
 				612E5D042B9E45680065B885 /* GoalInfo.swift in Sources */,
