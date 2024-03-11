@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var navigation : NavigationManager
     @State private var open = false
+    @State private var tabIndex = 0
     var body: some View {
         SideBarContainer(open: $open){
             VStack(spacing: 20){
@@ -124,7 +125,7 @@ struct HomeView: View {
                         Spacer()
                         
                         Button{
-                            
+                            navigation.navigate(to: HomeScreen.messages)
                         }label: {
                             Image(systemName: "ellipsis.message")
                                 .resizable()
@@ -185,15 +186,8 @@ struct HomeView: View {
                             
                             NextGoalCard(goal: Goal.sample)
                             
-                            
-                            VStack(alignment: .leading){
-                                Text("Recados")
-                                    .font(.headline)
-                                
-                                Text(verbatim: .lorenIpsum)
-                            }
-                            .padding(.vertical, 10)
-                            .grayBackground(8)
+                            MessageCard(messages: Message.sampleList)
+                                .padding(.bottom)
                             
                         }
                         .padding()
@@ -219,11 +213,15 @@ struct HomeView: View {
                 SettingsView()
             case .help:
                 HelpView()
-            
+            case .messages:
+                MessagesView()
             }
         }
         .navigationDestination(for: Goal.self) { goal in
             GoalDetailView(goal: goal)
+        }
+        .navigationDestination(for: Message.self) { message in
+            MessageDetailView(message: message)
         }
         
     }
@@ -261,6 +259,47 @@ struct HomeView: View {
         .grayBackground(8)
     }
     
+    func MessageCard(messages: [Message])-> some View {
+        VStack{
+            TabView(selection: $tabIndex) {
+                ForEach(messages.indices, id: \.self){ index in
+                    let message = messages[index]
+                    NavigationLink(value: message) {
+                        VStack(alignment: .leading){
+                            Text(message.title)
+                                .font(.headline)
+                            
+                            Text(message.text)
+                                .multilineTextAlignment(.leading)
+                                .font(.subheadline)
+                        }
+                        .padding(.vertical, 10)
+                        .tag(index)
+                        .foregroundStyle(Color.primary)
+                    }
+                    
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .frame(height: 150)
+            .grayBackground(8)
+            
+            HStack{
+                ForEach(messages.indices, id:\.self){ index in
+                    Button{
+                        withAnimation{
+                            tabIndex = index
+                        }
+                    }label: {
+                        Circle()
+                            .foregroundStyle(tabIndex == index ? Color(.systemGray) : Color(.systemGray3))
+                            .frame(width: 10, height: 10)
+                    }
+                }
+            }
+        }
+    }
+    
     func GButton(
         iconName: String = "",
         systemName: String = "",
@@ -275,7 +314,7 @@ struct HomeView: View {
                 
                 Text(label)
                     .fontWeight(.semibold)
-                    .font(.caption)
+                    .font(.caption2)
             }
             .frame(maxWidth: .infinity)
             .foregroundColor(.primary)

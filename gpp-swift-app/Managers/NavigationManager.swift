@@ -27,6 +27,7 @@ enum LoginScreen : Screen {
 }
 
 enum HomeScreen : Screen {
+    case messages
     case subjects
     case publications
     case dissertation

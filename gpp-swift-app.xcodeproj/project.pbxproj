@@ -19,6 +19,9 @@
 		612E5D102B9E69F40065B885 /* ForgotPasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D0F2B9E69F40065B885 /* ForgotPasswordChangeView.swift */; };
 		612E5D122B9E6E910065B885 /* SignUpTokenValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D112B9E6E910065B885 /* SignUpTokenValidation.swift */; };
 		612E5D142B9E6F290065B885 /* SignUpCreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D132B9E6F290065B885 /* SignUpCreatePasswordView.swift */; };
+		612E5D172B9E94450065B885 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D162B9E94450065B885 /* MessagesView.swift */; };
+		612E5D192B9E958E0065B885 /* MessageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D182B9E958E0065B885 /* MessageDetailView.swift */; };
+		612E5D1B2B9E9A390065B885 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E5D1A2B9E9A390065B885 /* Message.swift */; };
 		61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BCA12B9A4F4500ABAA14 /* GppApp.swift */; };
 		61C1BCA62B9A4F4700ABAA14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C1BCA52B9A4F4700ABAA14 /* Assets.xcassets */; };
 		61C1BCA92B9A4F4700ABAA14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C1BCA82B9A4F4700ABAA14 /* Preview Assets.xcassets */; };
@@ -75,6 +78,9 @@
 		612E5D0F2B9E69F40065B885 /* ForgotPasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordChangeView.swift; sourceTree = "<group>"; };
 		612E5D112B9E6E910065B885 /* SignUpTokenValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTokenValidation.swift; sourceTree = "<group>"; };
 		612E5D132B9E6F290065B885 /* SignUpCreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCreatePasswordView.swift; sourceTree = "<group>"; };
+		612E5D162B9E94450065B885 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		612E5D182B9E958E0065B885 /* MessageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailView.swift; sourceTree = "<group>"; };
+		612E5D1A2B9E9A390065B885 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		61C1BC9E2B9A4F4500ABAA14 /* gpp-swift-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gpp-swift-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C1BCA12B9A4F4500ABAA14 /* GppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GppApp.swift; sourceTree = "<group>"; };
 		61C1BCA52B9A4F4700ABAA14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,6 +173,15 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		612E5D152B9E94080065B885 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				612E5D162B9E94450065B885 /* MessagesView.swift */,
+				612E5D182B9E958E0065B885 /* MessageDetailView.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
 		61C1BC952B9A4F4500ABAA14 = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				612E5D012B9E45080065B885 /* Goal.swift */,
+				612E5D1A2B9E9A390065B885 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				61C1BCD52B9A586400ABAA14 /* HomeView.swift */,
+				612E5D152B9E94080065B885 /* Messages */,
 				61C1BCEC2B9B9DE300ABAA14 /* Subjects */,
 				61C1BCEE2B9B9DFC00ABAA14 /* Dissertation */,
 				61C1BCED2B9B9DF100ABAA14 /* Publications */,
@@ -528,12 +545,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612E5D172B9E94450065B885 /* MessagesView.swift in Sources */,
 				61C1BCD12B9A566E00ABAA14 /* LoginView.swift in Sources */,
 				612E5D002B9E3FED0065B885 /* InfoCircle.swift in Sources */,
+				612E5D1B2B9E9A390065B885 /* Message.swift in Sources */,
 				61C1BCF52B9C005300ABAA14 /* SubjectDetailView.swift in Sources */,
 				61C1BCF82B9C10FC00ABAA14 /* SideBarContainer.swift in Sources */,
 				61C1BCE12B9B638C00ABAA14 /* StringExtension.swift in Sources */,
 				61C1BCD62B9A586400ABAA14 /* HomeView.swift in Sources */,
+				612E5D192B9E958E0065B885 /* MessageDetailView.swift in Sources */,
 				612E5D102B9E69F40065B885 /* ForgotPasswordChangeView.swift in Sources */,
 				61C1BD022B9CA2CB00ABAA14 /* SettingsView.swift in Sources */,
 				61C1BCE32B9B661700ABAA14 /* SubjectsView.swift in Sources */,
