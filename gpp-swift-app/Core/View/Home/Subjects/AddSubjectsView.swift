@@ -9,13 +9,14 @@ import SwiftUI
 
 struct AddSubjectsView: View {
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var viewModel : InnerViewModel
     
     @State private var search = ""
     var body: some View {
         VStack{
             List{
-                ForEach(0..<20, id: \.self){_ in
-                    SubjectCell()
+                ForEach(viewModel.subjectsList, id: \.self){ subject in
+                    SubjectCell(subject)
                 }
             }
         }
@@ -33,35 +34,40 @@ struct AddSubjectsView: View {
             }
         }
         .searchable(text: $search, placement: .navigationBarDrawer(displayMode: .always))
+        .navigationDestination(for: Subject.self) { subject in
+            SubjectDetailView(subject: .constant(subject))
+        }
     }
     
-    func SubjectCell() -> some View {
+    func SubjectCell(_ subject: Subject) -> some View {
         HStack{
-            VStack{
-                Text("PGC")
-                Text("001")
-            }
-            .bold()
-            .foregroundColor(.white)
-            .font(.system(size: 12, weight: .bold))
-            .background(
-                Circle()
-                    .foregroundColor(.blue)
-                    .frame(width: 50, height: 50)
+            
+            HStack{
+                InfoCircle(
+                    topLabel: subject.codeString.0,
+                    botLabel: subject.codeString.1,
+                    isDate: false
+                )
                 
+                Spacer()
+                
+                Text(subject.title)
+                    .font(.headline)
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(2)
+                    .horizontalAlignment(.leading)
+                
+                Spacer()
+            }
+            .contentShape(Rectangle())
+            .background(
+                NavigationLink(value: subject) {
+                    EmptyView()
+                }.opacity(0)
             )
             
-            Spacer()
-            
-            Text("Analise de Algoritmos")
-                .font(.headline)
-                .multilineTextAlignment(.leading)
-                .lineLimit(2)
-            
-            Spacer()
-            
             Button{
-                
+                viewModel.addUserSubject(subject)
             }label: {
                 Image(systemName: "plus")
                     .resizable()
@@ -76,14 +82,16 @@ struct AddSubjectsView: View {
                             .frame(width: 40, height: 40)
                     )
             }
-
+            .buttonStyle(.borderless)
+            .padding(.horizontal)
+            
         }
-        .padding()
     }
 }
 
 #Preview {
     NavigationStack{
         AddSubjectsView()
+            .environmentObject(InnerViewModel())
     }
 }

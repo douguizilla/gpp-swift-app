@@ -9,6 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var navigation : NavigationManager
+    
+    @StateObject var viewModel = InnerViewModel()
+    
     @State private var open = false
     @State private var tabIndex = 0
     var body: some View {
@@ -199,29 +202,40 @@ struct HomeView: View {
             switch screen {
             case .subjects:
                 SubjectsView()
+                    .environmentObject(viewModel)
             case .publications:
                 PublicationsView()
+                    .environmentObject(viewModel)
             case .dissertation:
                 DissertationView()
+                    .environmentObject(viewModel)
             case .goals:
                 GoalsView()
+                    .environmentObject(viewModel)
             case .profile:
                 ProfileView()
+                    .environmentObject(viewModel)
             case .changePassword:
                 ChangePasswordView()
+                    .environmentObject(viewModel)
             case .settings:
                 SettingsView()
+                    .environmentObject(viewModel)
             case .help:
                 HelpView()
+                    .environmentObject(viewModel)
             case .messages:
                 MessagesView()
+                    .environmentObject(viewModel)
             }
         }
         .navigationDestination(for: Goal.self) { goal in
             GoalDetailView(goal: goal)
+                .environmentObject(viewModel)
         }
         .navigationDestination(for: Message.self) { message in
             MessageDetailView(message: message)
+                .environmentObject(viewModel)
         }
         
     }

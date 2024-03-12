@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SubjectsView: View {
+    @EnvironmentObject var viewModel : InnerViewModel
+    
     @State private var showAddSubjectsView = false
     
     var body: some View {
@@ -30,26 +32,19 @@ struct SubjectsView: View {
                 
                 Section("2 SEMESTRE"){
                     ForEach(0..<3){_ in
-                        NavigationLink {
-                            SubjectDetailView()
-                        } label: {
-                            SubjectCell()
+                        NavigationLink(value: Subject.sampleList[0]) {
+                            SubjectCell(Subject.sampleList[0])
                         }
                     }
                 }
                 
                 Section("1 SEMESTRE"){
                     ForEach(0..<3){_ in
-                        NavigationLink {
-                            SubjectDetailView()
-                        } label: {
-                            SubjectCell()
+                        NavigationLink(value: Subject.sampleList[0]) {
+                            SubjectCell(Subject.sampleList[0])
                         }
                     }
                 }
-                
-                
-                
             }
         }
         .navigationTitle("Disciplinas")
@@ -69,28 +64,27 @@ struct SubjectsView: View {
             NavigationStack{
                 AddSubjectsView()
             }
+            .environmentObject(viewModel)
+        }
+        .navigationDestination(for: Subject.self) { subject in
+            SubjectDetailView(subject: .constant(subject))
         }
     }
     
-    func SubjectCell() -> some View {
-        HStack{
-            VStack{
-                Text("PGC")
-                Text("001")
-            }
-            .bold()
-            .foregroundColor(.white)
-            .font(.system(size: 12, weight: .bold))
-            .padding()
-            .background(
-                Circle()
-                    .foregroundColor(.blue)
+    func SubjectCell(_ subject: Subject) -> some View {
+        HStack(alignment: .top){
+            InfoCircle(
+                topLabel: subject.codeString.0,
+                botLabel: subject.codeString.1,
+                isDate: false
             )
             
             VStack(alignment: .leading){
-                Text("Analise de Algoritmos")
-                    .font(.headline)
-                Text("FAZENDO")
+                Text(subject.title)
+                    .font(.footnote)
+                    .fontWeight(.semibold)
+                
+                Text(subject.status.display)
                     .foregroundStyle(.white)
                     .font(.caption2)
                     .bold()
@@ -109,5 +103,6 @@ struct SubjectsView: View {
 #Preview {
     NavigationStack{
         SubjectsView()
+            .environmentObject(InnerViewModel())
     }
 }
