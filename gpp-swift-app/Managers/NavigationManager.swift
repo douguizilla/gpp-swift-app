@@ -10,9 +10,19 @@ import SwiftUI
 
 class NavigationManager : ObservableObject {
     @Published var path = NavigationPath()
+    @Published var sideBar = false
     
     func navigate(to screen: any Screen) {
         path.append(screen)
+        closeSideBar()
+    }
+    
+    func openSideBar(){
+        sideBar = true
+    }
+    
+    func closeSideBar(){
+        sideBar = false
     }
     
     func logout(){

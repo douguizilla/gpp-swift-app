@@ -12,14 +12,13 @@ struct HomeView: View {
     
     @StateObject var viewModel = InnerViewModel()
     
-    @State private var open = false
     @State private var tabIndex = 0
     var body: some View {
-        SideBarContainer(open: $open){
+        SideBarContainer(open: $navigation.sideBar){
             VStack(spacing: 20){
                 HStack{
                     Button{
-                        open.toggle()
+                        navigation.closeSideBar()
                     }label: {
                         Image(systemName: "chevron.left")
                             .resizable()
@@ -118,7 +117,7 @@ struct HomeView: View {
                 VStack{
                     HStack{
                         Button{
-                            open.toggle()
+                            navigation.openSideBar()
                         }label: {
                             Circle()
                                 .frame(width: 30, height: 30)
