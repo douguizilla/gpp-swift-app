@@ -71,7 +71,7 @@ struct SubjectDetailView: View {
         HStack{
             Text("\(label): ")
                 .bold()
-            + Text(value)
+            + Text(LocalizedStringKey(value))
                 
         }
         .horizontalAlignment(.leading)
