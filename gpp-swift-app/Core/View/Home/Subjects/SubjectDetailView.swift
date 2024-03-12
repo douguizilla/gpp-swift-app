@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SubjectDetailView: View {
     @Binding var subject: Subject
-    @State private var status : SubjectStatus = .NAO_MATRICULADO
     
     var body: some View {
         VStack{
@@ -20,18 +19,16 @@ struct SubjectDetailView: View {
                         .bold()
                         .horizontalAlignment(.leading)
                     
-                    Menu {
-                        ForEach(SubjectStatus.allCases, id: \.self){ status in
-                            Button(status.display){
-                                self.status = status
+                    if subject.status != .NAO_MATRICULADO {
+                        Menu {
+                            ForEach(SubjectStatus.allCases, id: \.self){ status in
+                                Button(status.display){
+                                    self.subject.status = status
+                                }
                             }
-                        }
-                    } label: {
-                        Button{
-                            subject.status = self.status
-                        }label: {
+                        } label: {
                             HStack(spacing: 16){
-                                Text(self.status.display)
+                                Text(self.subject.status.display)
                                     .foregroundStyle(.white)
                                     .font(.headline)
                                 
@@ -40,7 +37,7 @@ struct SubjectDetailView: View {
                                     .frame(width: 20, height: 20)
                                     .bold()
                                     .background(
-                                        RoundedRectangle(cornerRadius: 5)
+                                        Circle()
                                             .frame(width: 25, height: 25)
                                             .foregroundStyle(.black)
                                             .opacity(0.3)
@@ -48,12 +45,12 @@ struct SubjectDetailView: View {
                             }
                             .padding(10)
                             .background(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .foregroundStyle(self.status.color)
+                                Capsule()
+                                    .foregroundStyle(self.subject.status.color)
                             )
                         }
+                        .horizontalAlignment(.leading)
                     }
-                    .horizontalAlignment(.leading)
                     
                     GLabel(label: "Grupo", value: subject.group)
                     GLabel(label: "Créditos", value: subject.credits)

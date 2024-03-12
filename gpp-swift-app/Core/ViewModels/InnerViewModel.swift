@@ -13,23 +13,5 @@ class InnerViewModel : ObservableObject {
     @Published var subjectsList : [Subject] = Subject.sampleList
     
     
-    func addUserSubject(_ subject_: Subject){
-        var subject = subject_
-        subject.status = .MATRICULADO
-        
-        withAnimation {
-            userSubjectsList.append(subject)
-            subjectsList.removeAll(where: {
-                $0.id == subject.id
-            })
-        }
-    }
     
-    func removeUserSubject(_ subject: Subject){
-        withAnimation {
-            userSubjectsList.removeAll(where: {
-                $0.id == subject.id
-            })
-        }
-    }
 }

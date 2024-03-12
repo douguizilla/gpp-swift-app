@@ -17,7 +17,7 @@ struct SubjectsView: View {
             List{
                 ProgressBar(
                     title: "Seus resultados:",
-                    value: 25,
+                    value: 0,
                     total: 26,
                     label: "créditos totais"
                 )
@@ -30,18 +30,28 @@ struct SubjectsView: View {
                     Text("1 crédito")
                 }
                 
-                Section("2 SEMESTRE"){
-                    ForEach(0..<3){_ in
-                        NavigationLink(value: Subject.sampleList[0]) {
-                            SubjectCell(Subject.sampleList[0])
+                if viewModel.userSubjectListIsEmpty() {
+                    Section{
+                        Text("Nenhuma disciplina cadastrada")
+                            .horizontalAlignment(.center)
+                        
+                        Button{
+                            showAddSubjectsView.toggle()
+                        }label: {
+                            Text("Adicionar disciplinas")
+                                .horizontalAlignment(.center)
                         }
                     }
-                }
-                
-                Section("1 SEMESTRE"){
-                    ForEach(0..<3){_ in
-                        NavigationLink(value: Subject.sampleList[0]) {
-                            SubjectCell(Subject.sampleList[0])
+                }else{
+                    ForEach(viewModel.separetedUserList, id: \.self){ section in
+                        let semester = section.first?.semester ?? 1
+                        let subjects = section
+                        Section("\(semester)º SEMESTRE"){
+                            ForEach(subjects, id: \.self){ subject in
+                                NavigationLink(value: subject) {
+                                    SubjectCell(subject)
+                                }
+                            }
                         }
                     }
                 }
@@ -67,12 +77,21 @@ struct SubjectsView: View {
             .environmentObject(viewModel)
         }
         .navigationDestination(for: Subject.self) { subject in
-            SubjectDetailView(subject: .constant(subject))
+            let index = viewModel.userSubjectsList.firstIndex(where: {
+                $0.id == subject.id
+            })
+            SubjectDetailView(
+                subject: $viewModel.userSubjectsList[index!]
+            )
         }
     }
     
     func SubjectCell(_ subject: Subject) -> some View {
         HStack(alignment: .top){
+            let index = viewModel.userSubjectsList.firstIndex(where: {
+                $0.id == subject.id
+            })
+            
             InfoCircle(
                 topLabel: subject.codeString.0,
                 botLabel: subject.codeString.1,
@@ -84,7 +103,7 @@ struct SubjectsView: View {
                     .font(.footnote)
                     .fontWeight(.semibold)
                 
-                Text(subject.status.display)
+                Text(viewModel.userSubjectsList[index!].status.display)
                     .foregroundStyle(.white)
                     .font(.caption2)
                     .bold()
@@ -92,7 +111,9 @@ struct SubjectsView: View {
                     .padding(.vertical, 4)
                     .background(
                         Capsule()
-                            .foregroundColor(.blue)
+                            .foregroundColor( 
+                                viewModel.userSubjectsList[index!].status.color
+                            )
                     )
                 
             }
