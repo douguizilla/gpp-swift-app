@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		611CB3512CC9BF800070B941 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611CB3502CC9BF7D0070B941 /* Constants.swift */; };
 		61274F1F2B9FC4400027EEB3 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61274F1E2B9FC4400027EEB3 /* Subject.swift */; };
 		61274F212B9FCC920027EEB3 /* SubjectStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61274F202B9FCC920027EEB3 /* SubjectStatus.swift */; };
 		61274F242B9FCF3F0027EEB3 /* InnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61274F232B9FCF3F0027EEB3 /* InnerViewModel.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		611CB3502CC9BF7D0070B941 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		61274F1E2B9FC4400027EEB3 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		61274F202B9FCC920027EEB3 /* SubjectStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectStatus.swift; sourceTree = "<group>"; };
 		61274F232B9FCF3F0027EEB3 /* InnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerViewModel.swift; sourceTree = "<group>"; };
@@ -143,6 +145,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		611CB34B2CC9BE570070B941 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				611CB3552CC9C10E0070B941 /* DataSources */,
+				611CB3562CC9C11B0070B941 /* Mappers */,
+				61C1BCCE2B9A54C600ABAA14 /* Models */,
+				611CB3542CC9C0E00070B941 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		611CB34C2CC9BE790070B941 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				611CB3572CC9C1280070B941 /* Entities */,
+				611CB34F2CC9BF2D0070B941 /* Repositories */,
+				611CB3532CC9BFA60070B941 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		611CB34D2CC9BE950070B941 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCD72B9A63EB00ABAA14 /* Components */,
+				611CB34E2CC9BF0D0070B941 /* NavigationManager */,
+				61C1BCCF2B9A55FD00ABAA14 /* View */,
+				61274F222B9FCF0A0027EEB3 /* ViewModels */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		611CB34E2CC9BF0D0070B941 /* NavigationManager */ = {
+			isa = PBXGroup;
+			children = (
+				61C1BCD32B9A574500ABAA14 /* NavigationManager.swift */,
+			);
+			path = NavigationManager;
+			sourceTree = "<group>";
+		};
+		611CB34F2CC9BF2D0070B941 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		611CB3522CC9BF8B0070B941 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				611CB3502CC9BF7D0070B941 /* Constants.swift */,
+				61C1BCCD2B9A547800ABAA14 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		611CB3532CC9BFA60070B941 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		611CB3542CC9C0E00070B941 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		611CB3552CC9C10E0070B941 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		611CB3562CC9C11B0070B941 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		611CB3572CC9C1280070B941 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		611CB3582CC9C1A90070B941 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		61274F222B9FCF0A0027EEB3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,9 +331,9 @@
 			children = (
 				61C1BCCB2B9A543D00ABAA14 /* App */,
 				61C1BCCC2B9A544600ABAA14 /* Core */,
-				61C1BCD22B9A573000ABAA14 /* Managers */,
-				61C1BCCD2B9A547800ABAA14 /* Extensions */,
-				61C1BCCE2B9A54C600ABAA14 /* Models */,
+				611CB34B2CC9BE570070B941 /* Data */,
+				611CB34C2CC9BE790070B941 /* Domain */,
+				611CB34D2CC9BE950070B941 /* Presentation */,
 				61C1BCA52B9A4F4700ABAA14 /* Assets.xcassets */,
 				61C1BCA72B9A4F4700ABAA14 /* Preview Content */,
 			);
@@ -276,9 +376,8 @@
 		61C1BCCC2B9A544600ABAA14 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				61C1BCD72B9A63EB00ABAA14 /* Components */,
-				61C1BCCF2B9A55FD00ABAA14 /* View */,
-				61274F222B9FCF0A0027EEB3 /* ViewModels */,
+				611CB3582CC9C1A90070B941 /* DI */,
+				611CB3522CC9BF8B0070B941 /* Utils */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -307,18 +406,21 @@
 		61C1BCCF2B9A55FD00ABAA14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				61C1BCFA2B9CA1E100ABAA14 /* ChangePassword */,
+				61C1BCEE2B9B9DFC00ABAA14 /* Dissertation */,
+				612E5D072B9E63D60065B885 /* ForgotPassword */,
+				612E5CFB2B9E3BFF0065B885 /* Goals */,
+				61C1BCFC2B9CA22B00ABAA14 /* Help */,
 				61C1BCEF2B9B9E1500ABAA14 /* Home */,
 				61C1BCEB2B9B9DDB00ABAA14 /* Login */,
+				612E5D152B9E94080065B885 /* Messages */,
+				61C1BCF92B9CA1BF00ABAA14 /* Profile */,
+				61C1BCED2B9B9DF100ABAA14 /* Publications */,
+				61C1BCFB2B9CA21B00ABAA14 /* Settings */,
+				612E5D082B9E63E10065B885 /* SignUp */,
+				61C1BCEC2B9B9DE300ABAA14 /* Subjects */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		61C1BCD22B9A573000ABAA14 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				61C1BCD32B9A574500ABAA14 /* NavigationManager.swift */,
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		61C1BCD72B9A63EB00ABAA14 /* Components */ = {
@@ -343,8 +445,6 @@
 		61C1BCEB2B9B9DDB00ABAA14 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				612E5D082B9E63E10065B885 /* SignUp */,
-				612E5D072B9E63D60065B885 /* ForgotPassword */,
 				61C1BCD02B9A566E00ABAA14 /* LoginView.swift */,
 			);
 			path = Login;
@@ -382,15 +482,6 @@
 			isa = PBXGroup;
 			children = (
 				61C1BCD52B9A586400ABAA14 /* HomeView.swift */,
-				612E5D152B9E94080065B885 /* Messages */,
-				61C1BCEC2B9B9DE300ABAA14 /* Subjects */,
-				61C1BCEE2B9B9DFC00ABAA14 /* Dissertation */,
-				61C1BCED2B9B9DF100ABAA14 /* Publications */,
-				612E5CFB2B9E3BFF0065B885 /* Goals */,
-				61C1BCF92B9CA1BF00ABAA14 /* Profile */,
-				61C1BCFA2B9CA1E100ABAA14 /* ChangePassword */,
-				61C1BCFB2B9CA21B00ABAA14 /* Settings */,
-				61C1BCFC2B9CA22B00ABAA14 /* Help */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -507,7 +598,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					61C1BC9D2B9A4F4500ABAA14 = {
 						CreatedOnToolsVersion = 15.2;
@@ -593,6 +684,7 @@
 				612E5D062B9E4C4E0065B885 /* GoalDetailView.swift in Sources */,
 				61C1BD002B9CA2BC00ABAA14 /* ChangePasswordView.swift in Sources */,
 				61C1BCFE2B9CA2A000ABAA14 /* ProfileView.swift in Sources */,
+				611CB3512CC9BF800070B941 /* Constants.swift in Sources */,
 				612E5D142B9E6F290065B885 /* SignUpCreatePasswordView.swift in Sources */,
 				612E5CFA2B9E36DA0065B885 /* ColorExtensions.swift in Sources */,
 				61C1BCA22B9A4F4500ABAA14 /* GppApp.swift in Sources */,
@@ -771,6 +863,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"gpp-swift-app/Preview Content\"";
@@ -790,8 +883,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ufu.gpp-swift-app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ufu.gpp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -803,6 +897,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"gpp-swift-app/Preview Content\"";
@@ -822,8 +917,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ufu.gpp-swift-app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ufu.gpp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -833,7 +929,6 @@
 		61C1BCC62B9A4F4800ABAA14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -852,7 +947,6 @@
 		61C1BCC72B9A4F4800ABAA14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -871,7 +965,6 @@
 		61C1BCC92B9A4F4800ABAA14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -888,7 +981,6 @@
 		61C1BCCA2B9A4F4800ABAA14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

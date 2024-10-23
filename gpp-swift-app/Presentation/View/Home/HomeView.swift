@@ -61,7 +61,7 @@ struct HomeView: View {
                         
                     }
                     
-                    Text("Redes complexas")
+                    Text("Linha de pesquisa")
                         .font(.subheadline)
                         .italic()
                 }
