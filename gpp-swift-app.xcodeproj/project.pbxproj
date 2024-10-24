@@ -51,6 +51,8 @@
 		61C1BD022B9CA2CB00ABAA14 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BD012B9CA2CB00ABAA14 /* SettingsView.swift */; };
 		61C1BD042B9CA2D500ABAA14 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BD032B9CA2D500ABAA14 /* HelpView.swift */; };
 		61C1BD072B9CA81800ABAA14 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1BD062B9CA81800ABAA14 /* PasswordTextField.swift */; };
+		61FC42B32CCB03300053CBB8 /* Faq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC42B22CCB032A0053CBB8 /* Faq.swift */; };
+		61FC42B52CCB089A0053CBB8 /* HelpDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC42B42CCB089A0053CBB8 /* HelpDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,8 @@
 		61C1BD012B9CA2CB00ABAA14 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		61C1BD032B9CA2D500ABAA14 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		61C1BD062B9CA81800ABAA14 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		61FC42B22CCB032A0053CBB8 /* Faq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faq.swift; sourceTree = "<group>"; };
+		61FC42B42CCB089A0053CBB8 /* HelpDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +399,7 @@
 		61C1BCCE2B9A54C600ABAA14 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				61FC42B22CCB032A0053CBB8 /* Faq.swift */,
 				612E5D012B9E45080065B885 /* Goal.swift */,
 				612E5D1A2B9E9A390065B885 /* Message.swift */,
 				61274F1E2B9FC4400027EEB3 /* Subject.swift */,
@@ -522,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				61C1BD032B9CA2D500ABAA14 /* HelpView.swift */,
+				61FC42B42CCB089A0053CBB8 /* HelpDetailView.swift */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -676,6 +682,8 @@
 				612E5D102B9E69F40065B885 /* ForgotPasswordChangeView.swift in Sources */,
 				61C1BD022B9CA2CB00ABAA14 /* SettingsView.swift in Sources */,
 				61C1BCE32B9B661700ABAA14 /* SubjectsView.swift in Sources */,
+				61FC42B52CCB089A0053CBB8 /* HelpDetailView.swift in Sources */,
+				61FC42B32CCB03300053CBB8 /* Faq.swift in Sources */,
 				612E5D0A2B9E65AC0065B885 /* ForgotPasswordRequestView.swift in Sources */,
 				61C1BCE52B9B7BF600ABAA14 /* PublicationsView.swift in Sources */,
 				61C1BD072B9CA81800ABAA14 /* PasswordTextField.swift in Sources */,

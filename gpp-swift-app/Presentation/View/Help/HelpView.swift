@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct HelpView: View {
+    @EnvironmentObject var model : InnerViewModel
+    @State var search: String = ""
     var body: some View {
-        Text("FAQ de acordo com a resolução / ver com o secretário")
+        VStack{
+            List{
+                ForEach(model.faqList, id: \.id){ faq in
+                    NavigationLink(value: faq) {
+                        FaqItem(faq: faq)
+                    }
+                }
+            }
+            .searchable(text: $search)
+            .navigationDestination(for: Faq.self) { item in
+                HelpDetailView(faq: item)
+            }
+        }
+        .navigationTitle("Ajuda")
+    }
+    
+    func FaqItem(faq: Faq) -> some View {
+        Text(faq.question)
+            .font(.body)
+            .padding(10)
+            .multilineTextAlignment(.leading)
     }
 }
 
 #Preview {
-    HelpView()
+    NavigationStack{
+        HelpView()
+            .environmentObject(InnerViewModel())
+    }
 }

@@ -12,6 +12,8 @@ class InnerViewModel : ObservableObject {
     @Published var userSubjectsList : [Subject] = []
     @Published var subjectsList : [Subject] = [] //Subject.sampleList
     
+    @Published var faqList : [Faq] = Faq.sample
+    
     
     
 }
