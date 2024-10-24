@@ -12,8 +12,8 @@ struct PublicationsView: View {
     var body: some View {
         VStack{
             List{
-                ForEach(1..<5){ _ in
-                    PublicationCell()
+                ForEach(1..<5){ value in
+                    PublicationCell(value: value)
                 }
             }
         }
@@ -37,15 +37,15 @@ struct PublicationsView: View {
         }
     }
     
-    func PublicationCell()->some View {
+    func PublicationCell(value: Int)->some View {
         VStack(alignment: .leading){
-            Text("Publicação 1")
+            Text("Publicação \(value)")
                 .font(.headline)
             
             HStack{
                 Text("Nome do veículo")
                 Spacer()
-                Text("dd/MM/AAAA")
+                Text("0\(value)/0\(value)/2024")
             }
             .font(.subheadline)
         }
