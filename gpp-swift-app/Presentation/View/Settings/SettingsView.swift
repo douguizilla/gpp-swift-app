@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State var active = false
+    @EnvironmentObject private var viewModel : InnerViewModel
+    
     var body: some View {
         VStack{
             List{
                 Section{
-                    Toggle(isOn: $active){
+                    Toggle(isOn: $viewModel.settingsToggle){
                         Text("Ativar notificações sobre os marcos temporais")
                             .font(.footnote)
                     }
@@ -29,5 +30,6 @@ struct SettingsView: View {
 #Preview {
     NavigationStack{
         SettingsView()
+            .environmentObject(InnerViewModel())
     }
 }

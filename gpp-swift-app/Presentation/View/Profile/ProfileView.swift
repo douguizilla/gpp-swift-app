@@ -8,32 +8,77 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject private var viewModel : InnerViewModel
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         VStack{
             List{
                 Section("dados pessoais"){
-                    TextField("Nome", text: .constant(""))
-                    TextField("Matrícula", text: .constant(""))
-                    TextField("Data de ingresso", text: .constant(""))
-                    TextField("Data de início da bolsa", text: .constant(""))
-                    TextField("E-mail", text: .constant(""))
-                    TextField("Lattes", text: .constant(""))
+                    HStack{
+                        Text("Nome: ").bold()
+                        TextField("", text: $viewModel.profile.name)
+                    }
+                    HStack{
+                        Text("Matrícula: ").bold()
+                        TextField("", text: $viewModel.profile.registerID)
+                    }
+                    HStack{
+                        Text("Data de ingresso: ").bold()
+                        TextField("", text: $viewModel.profile.entryDate)
+                    }
+                    HStack{
+                        Text("Data de início da bolsa: ").bold()
+                        TextField("", text: $viewModel.profile.scholarShipStartDate)
+                    }
+                    HStack{
+                        Text("E-mail: ").bold()
+                        TextField("", text: $viewModel.profile.email)
+                    }
+                    HStack{
+                        Text("Lattes: ").bold()
+                        TextField("", text: $viewModel.profile.lattes)
+                    }
                 }
                 
                 Section("dados do projeto"){
-                    TextField("Título", text: .constant(""))
-                    TextField("Linha de pesquisa", text: .constant(""))
-                    TextField("Categoria", text: .constant(""))
-                    TextField("Orientador", text: .constant(""))
-                    TextField("E-mail do orientador", text: .constant(""))
-                    TextField("Coorientadores", text: .constant(""))
-                    TextField("Data de início", text: .constant(""))
-                    TextField("Data de fim", text: .constant(""))
+                    HStack{
+                        Text("Título: ").bold()
+                        TextField("", text: $viewModel.profile.title)
+                    }
+                    HStack{
+                        Text("Linha de pesquisa: ").bold()
+                        TextField("", text: $viewModel.profile.lineOfResearch)
+                    }
+                    HStack{
+                        Text("Categoria: ").bold()
+                        TextField("", text: $viewModel.profile.category)
+                    }
+                    HStack{
+                        Text("Orientador: ").bold()
+                        TextField("", text: $viewModel.profile.advisor)
+                    }
+                    HStack{
+                        Text("E-mail do orientador: ").bold()
+                        TextField("", text: $viewModel.profile.advisorEmail)
+                    }
+                    HStack{
+                        Text("Coorientadores: ").bold()
+                        TextField("", text: $viewModel.profile.coadvisor)
+                    }
+                    HStack{
+                        Text("Data de início: ").bold()
+                        TextField("", text: $viewModel.profile.startDate)
+                    }
+                    HStack{
+                        Text("Data de fim: ").bold()
+                        TextField("", text: $viewModel.profile.endDate)
+                    }
                 }
             }
             
             Button{
-                
+                dismiss.callAsFunction()
             }label: {
                 Text("Salvar")
                     .buttonBackground()
@@ -49,5 +94,6 @@ struct ProfileView: View {
 #Preview {
     NavigationStack{
         ProfileView()
+            .environmentObject(InnerViewModel())
     }
 }

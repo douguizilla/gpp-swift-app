@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ChangePasswordView: View {
+    @Environment(\.dismiss) private var dismiss
+    
     @State private var currentPassword = ""
     @State private var newPassword = ""
     @State private var confirmPassword = ""
@@ -27,7 +29,7 @@ struct ChangePasswordView: View {
             }
             
             Button{
-                
+                dismiss.callAsFunction()
             }label: {
                 Text("Salvar")
                     .buttonBackground()
