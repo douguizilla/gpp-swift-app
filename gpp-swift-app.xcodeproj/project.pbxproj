@@ -56,6 +56,7 @@
 		61E5C5392CF0192200E319B1 /* Coauthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E5C5382CF0192200E319B1 /* Coauthor.swift */; };
 		61E5C53B2CF01A8800E319B1 /* PublicationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E5C53A2CF01A8800E319B1 /* PublicationDetailView.swift */; };
 		61E5C53D2CF023EB00E319B1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E5C53C2CF023E900E319B1 /* Profile.swift */; };
+		61E5C53F2CF02EEF00E319B1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E5C53E2CF02EEF00E319B1 /* Launch Screen.storyboard */; };
 		61FC42B32CCB03300053CBB8 /* Faq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC42B22CCB032A0053CBB8 /* Faq.swift */; };
 		61FC42B52CCB089A0053CBB8 /* HelpDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC42B42CCB089A0053CBB8 /* HelpDetailView.swift */; };
 /* End PBXBuildFile section */
@@ -130,6 +131,7 @@
 		61E5C5382CF0192200E319B1 /* Coauthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coauthor.swift; sourceTree = "<group>"; };
 		61E5C53A2CF01A8800E319B1 /* PublicationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationDetailView.swift; sourceTree = "<group>"; };
 		61E5C53C2CF023E900E319B1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		61E5C53E2CF02EEF00E319B1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		61FC42B22CCB032A0053CBB8 /* Faq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faq.swift; sourceTree = "<group>"; };
 		61FC42B42CCB089A0053CBB8 /* HelpDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -350,6 +352,7 @@
 				611CB34D2CC9BE950070B941 /* Presentation */,
 				61C1BCA52B9A4F4700ABAA14 /* Assets.xcassets */,
 				61C1BCA72B9A4F4700ABAA14 /* Preview Content */,
+				61E5C53E2CF02EEF00E319B1 /* Launch Screen.storyboard */,
 			);
 			path = "gpp-swift-app";
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E5C53F2CF02EEF00E319B1 /* Launch Screen.storyboard in Resources */,
 				61C1BCA92B9A4F4700ABAA14 /* Preview Assets.xcassets in Resources */,
 				61C1BCA62B9A4F4700ABAA14 /* Assets.xcassets in Resources */,
 			);
