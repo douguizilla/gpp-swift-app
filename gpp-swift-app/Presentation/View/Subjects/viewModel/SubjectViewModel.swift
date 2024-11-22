@@ -58,6 +58,7 @@ extension InnerViewModel {
             userSubjectsList.removeAll(where: {
                 $0.id == subject.id
             })
+            subjectsList.append(subject)
         }
     }
 }

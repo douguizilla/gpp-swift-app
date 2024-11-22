@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SubjectDetailView: View {
+    @EnvironmentObject private var model : InnerViewModel
+    @Environment(\.dismiss) private var dismiss
+    
     @Binding var subject: Subject
     
     var body: some View {
@@ -59,6 +62,12 @@ struct SubjectDetailView: View {
                     GLabel(label: "Ficha da disciplina", value: subject.url)
                 }
                 .padding()
+                .onChange(of: subject.status) { status in
+                    if status == .NAO_MATRICULADO {
+                        dismiss.callAsFunction()
+                        model.removeUserSubject(subject)
+                    }
+                }
             }
         }
         .navigationBarTitleDisplayMode(.inline)

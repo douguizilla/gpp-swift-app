@@ -50,6 +50,16 @@ struct SubjectsView: View {
                             ForEach(subjects, id: \.self){ subject in
                                 NavigationLink(value: subject) {
                                     SubjectCell(subject)
+                                        .swipeActions(allowsFullSwipe: true) {
+                                            Button{
+                                                withAnimation{
+                                                    viewModel.removeUserSubject(subject)
+                                                }
+                                            }label:{
+                                                Image(systemName: "trash")
+                                            }
+                                            .tint(.red)
+                                        }
                                 }
                             }
                         }
@@ -83,6 +93,7 @@ struct SubjectsView: View {
             SubjectDetailView(
                 subject: $viewModel.userSubjectsList[index!]
             )
+            .environmentObject(viewModel)
         }
     }
     
