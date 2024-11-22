@@ -25,6 +25,15 @@ struct HelpView: View {
             }
         }
         .navigationTitle("Ajuda")
+        .toolbar{
+            ToolbarItem(placement: .topBarTrailing) {
+                Button{
+                    
+                }label:{
+                    Image(systemName: "envelope")
+                }
+            }
+        }
     }
     
     func FaqItem(faq: Faq) -> some View {

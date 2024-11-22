@@ -66,13 +66,14 @@ struct GoalDetailView: View {
                 .horizontalAlignment(.leading)
                 .padding()
             }
-            
-            Button{
-                
-            }label: {
-                Text("Enviar")
-                    .buttonBackground()
-                    .padding()
+            if goal.hasMandatoryDoc {
+                Button{
+                    
+                }label: {
+                    Text("Enviar")
+                        .buttonBackground()
+                        .padding()
+                }
             }
         }
         .navigationBarTitleDisplayMode(.inline)
