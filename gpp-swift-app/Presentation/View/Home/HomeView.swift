@@ -46,22 +46,22 @@ struct HomeView: View {
                 }
                 
                 VStack(spacing: 6){
-                    Text("Douglas Gomes")
+                    Text(viewModel.profile.name)
                         .font(.headline)
                     
                     HStack(spacing: 5){
                         
-                        Text("11621BCC013")
+                        Text(viewModel.profile.registerID)
                             .font(.subheadline)
                         
                         Text("-")
                         
-                        Text("Mestrado")
+                        Text(viewModel.profile.category)
                             .font(.subheadline)
                         
                     }
                     
-                    Text("Linha de pesquisa")
+                    Text(viewModel.profile.lineOfResearch)
                         .font(.subheadline)
                         .italic()
                 }
@@ -139,10 +139,11 @@ struct HomeView: View {
                     .padding(.horizontal)
                     .paddingNotch()
                     
-                    ScrollView{
+                    //ScrollView{
+                    VStack{
                         VStack(spacing: 16){
                             
-                            Text("Olá, Douglas!")
+                            Text("Olá, \(viewModel.profile.firstName)!")
                                 .font(.largeTitle)
                                 .bold()
                                 .horizontalAlignment(.leading)
@@ -294,7 +295,7 @@ struct HomeView: View {
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .frame(height: 150)
+            .frame(maxHeight: .infinity)
             .grayBackground(8)
             
             HStack{
@@ -311,6 +312,7 @@ struct HomeView: View {
                 }
             }
         }
+        .padding(.bottom)
     }
     
     func GButton(

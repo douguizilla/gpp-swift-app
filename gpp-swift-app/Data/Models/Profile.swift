@@ -23,4 +23,8 @@ struct Profile: Codable {
     var coadvisor: String = ""
     var startDate: String = ""
     var endDate: String = ""
+    
+    var firstName : String {
+        String(name.split(separator: " ").first?.capitalized ?? "")
+    }
 }
