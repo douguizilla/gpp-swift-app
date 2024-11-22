@@ -8,17 +8,52 @@
 import SwiftUI
 
 struct PublicationsView: View {
+    @EnvironmentObject var viewModel : InnerViewModel
+    
     @State private var showAddPublicationsView = false
     var body: some View {
         VStack{
+            
             List{
-                ForEach(1..<5){ value in
-                    PublicationCell(value: value)
+                if viewModel.userPublicationsList.isEmpty{
+                    Section{
+                        Text("Nenhuma publicação cadastrada")
+                            .horizontalAlignment(.center)
+                        
+                        Button{
+                            showAddPublicationsView.toggle()
+                        }label: {
+                            Text("Adicionar publicação")
+                                .horizontalAlignment(.center)
+                        }
+                    }
+                }else{
+                    ForEach(viewModel.userPublicationsList, id: \.id){ publication in
+                        NavigationLink(value: publication){
+                            PublicationCell(publication)
+                                .swipeActions(allowsFullSwipe: true){
+                                    Button{
+                                        withAnimation{
+                                            viewModel.removePublication(publication)
+                                        }
+                                    }label:{
+                                        Image(systemName: "trash")
+                                    }
+                                    .tint(.red)
+                                }
+                        }
+                    }
                 }
             }
         }
         .navigationTitle("Publicações")
         .navigationBarTitleDisplayMode(.large)
+        .navigationDestination(for: Publication.self){ publication in
+            let index = viewModel.userPublicationsList.firstIndex(where: {
+                $0.id == publication.id
+            })
+            PublicationDetailView(publication: $viewModel.userPublicationsList[index!])
+        }
         .toolbar{
             ToolbarItem(placement: .topBarTrailing) {
                 Button{
@@ -37,15 +72,15 @@ struct PublicationsView: View {
         }
     }
     
-    func PublicationCell(value: Int)->some View {
+    func PublicationCell(_ publication: Publication)->some View {
         VStack(alignment: .leading){
-            Text("Publicação \(value)")
+            Text(publication.title)
                 .font(.headline)
             
             HStack{
-                Text("Nome do veículo")
+                Text(publication.vehicleName)
                 Spacer()
-                Text("0\(value)/0\(value)/2024")
+                Text("22/11/2024")
             }
             .font(.subheadline)
         }
@@ -55,5 +90,6 @@ struct PublicationsView: View {
 #Preview {
     NavigationStack{
         PublicationsView()
+            .environmentObject(InnerViewModel())
     }
 }

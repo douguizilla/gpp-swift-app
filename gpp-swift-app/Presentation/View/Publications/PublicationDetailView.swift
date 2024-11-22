@@ -1,39 +1,34 @@
 //
-//  AddPublicationsView.swift
+//  PublicationDetailView.swift
 //  gpp-swift-app
 //
-//  Created by Douglas Gomes de Paula on 08/03/24.
+//  Created by Douglas Gomes de Paula on 21/11/24.
 //
 
 import SwiftUI
 
-struct AddPublicationsView: View {
-    @EnvironmentObject private var viewModel : InnerViewModel
+struct PublicationDetailView: View {
     @Environment(\.dismiss) private var dismiss
     
-    @State private var title = ""
-    @State private var vehicleName = ""
-    @State private var url = ""
+    @Binding var publication: Publication
     
     @State private var name = ""
     @State private var lastName = ""
     @State private var lattes = ""
     @State private var affiliation = ""
-    
-    @State private var coauthorList : [Coauthor] = []
-    
+        
     var body: some View {
         VStack{
             List{
                 Section("publicação"){
-                    TextField("Título", text: $title)
-                    TextField("Nome do veículo", text: $vehicleName)
-                    TextField("URL", text: $url)
+                    TextField("Título", text: $publication.title)
+                    TextField("Nome do veículo", text: $publication.vehicleName)
+                    TextField("URL", text: $publication.url)
                 }
                 
-                if !coauthorList.isEmpty {
+                if !publication.coauthors.isEmpty {
                     Section("coautores da publicação"){
-                        ForEach(coauthorList, id: \.id){ coauthor in
+                        ForEach(publication.coauthors, id: \.id){ coauthor in
                             VStack(alignment: .leading){
                                 Text(coauthor.name + " " + coauthor.lastName)
                                     .font(.headline)
@@ -47,7 +42,7 @@ struct AddPublicationsView: View {
                             .swipeActions(allowsFullSwipe: true) {
                                 Button{
                                     withAnimation{
-                                        self.coauthorList.removeAll(where: {
+                                        publication.coauthors.removeAll(where: {
                                             $0.id == coauthor.id
                                         })
                                     }
@@ -75,12 +70,7 @@ struct AddPublicationsView: View {
                         affiliation: affiliation
                     )
                     
-                    coauthorList.append(coauthor)
-                    
-                    name = ""
-                    lastName = ""
-                    lattes = ""
-                    affiliation = ""
+                    publication.coauthors.append(coauthor)
                     
                 }label: {
                     HStack{
@@ -97,16 +87,9 @@ struct AddPublicationsView: View {
             }
             
             Button{
-                let publication = Publication(
-                    title: title,
-                    vehicleName: vehicleName,
-                    url: url,
-                    coauthors: coauthorList
-                )
-                viewModel.addPublication(publication)
                 dismiss.callAsFunction()
             }label:{
-                Text("Adicionar")
+                Text("Salvar")
                     .buttonBackground()
             }
             .padding()
@@ -114,24 +97,6 @@ struct AddPublicationsView: View {
         .background(Color(.secondarySystemBackground))
         .navigationTitle("Publicações")
         .navigationBarTitleDisplayMode(.large)
-        .toolbar{
-            ToolbarItem(placement: .topBarLeading) {
-                Button{
-                    dismiss()
-                }label: {
-                    Image(systemName: "chevron.left")
-                        .bold()
-                        .foregroundStyle(.blue)
-                }
-            }
-        }
     }
 }
 
-
-
-#Preview {
-    NavigationStack{
-        AddPublicationsView()
-    }
-}
